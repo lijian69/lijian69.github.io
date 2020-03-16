@@ -431,12 +431,12 @@
                                 <span class="chip bg-color">java</span>
                             </a>
                         
-                            <a href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">
-                                <span class="chip bg-color">开发规范</span>
-                            </a>
-                        
                             <a href="/tags/%E5%BF%85%E5%A4%87/">
                                 <span class="chip bg-color">必备</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">
+                                <span class="chip bg-color">开发规范</span>
                             </a>
                         
                     </div>
@@ -474,7 +474,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    95
+                    296
                 </div>
                 
 
@@ -497,13 +497,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<ul>
-<li>整理知识，学习笔记</li>
-<li>发布日记，杂文，所见所想</li>
-<li>撰写发布技术文稿（代码支持）</li>
-<li>撰写发布学术论文（LaTeX 公式支持）</li>
-</ul>
+                <p>《Java 开发手册》是阿里巴巴集团技术团队的集体智慧结晶和经验总结，经历了多次大规模<br>一线实战的检验及不断完善，公开到业界后，众多社区开发者踊跃参与，共同打磨完善，系统化地<br>整理成册。</p>
+<h2 id="一、编程规约"><a href="#一、编程规约" class="headerlink" title="一、编程规约"></a>一、编程规约</h2><h3 id="（一）命名风格"><a href="#（一）命名风格" class="headerlink" title="（一）命名风格"></a>（一）命名风格</h3><p>1.<font color="red">【强制】</font>代码中的命名均不能以<code>下划线或美元符号</code>开始，也不能以<code>下划线或美元符号</code>结束。</p>
+<blockquote>
+<p>反例：<em>name / __name / $name / name</em> / name$ / name__ </p>
+</blockquote>
+<p>2.<font color="red">【强制】</font> 代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式。 </p>
+<blockquote>
+<p><code>说明：</code>正确的英文拼写和语法可以让阅读者易于理解，避免歧义。注意，纯拼音命名方式更要避免采用。    </p>
+<p><code>正例：</code>renminbi / alibaba / taobao / youku / hangzhou 等国际通用的名称，可视同英文。    </p>
+<p><code>反例：</code>DaZhePromotion [打折] / getPingfenByName() [评分] / int 某变量 = 3</p>
 </blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -590,12 +593,12 @@
                                     <span class="chip bg-color">java</span>
                                 </a>
                             
-                                <a href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">
-                                    <span class="chip bg-color">开发规范</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%BF%85%E5%A4%87/">
                                     <span class="chip bg-color">必备</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">
+                                    <span class="chip bg-color">开发规范</span>
                                 </a>
                             
                         </div>
@@ -787,66 +790,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/11/a-li-ba-ba-dai-ma-gui-fan/">
+                <a href="/2020/03/12/react-ru-men-xue-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="阿里 Java 开发手册 -1.5 华山版">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="React 学习">
                         
-                        <span class="card-title">阿里 Java 开发手册 -1.5 华山版</span>
+                        <span class="card-title">React 学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            React 的学习
+react 有一个组件库 https://ant.design/
 
-整理知识，学习笔记
-发布日记，杂文，所见所想
-撰写发布技术文稿（代码支持）
-撰写发布学术论文（LaTeX 公式支持）
-
-
-
-        document.querySelectorAll('.github-emoji')
-     
+引入组件库 UI
+npm install -D antd
+// 按需引入
+npm install -D babel-plugin-import修改配置文
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-12
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%90%8E%E5%8F%B0%E5%BC%80%E5%8F%91/" class="post-category">
-                                    后台开发
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/nodejs/">
+                        <span class="chip bg-color">nodejs</span>
                     </a>
                     
-                    <a href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">
-                        <span class="chip bg-color">开发规范</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%BF%85%E5%A4%87/">
-                        <span class="chip bg-color">必备</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
@@ -1051,7 +1044,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.7k</span>&nbsp;字
+                class="white-color">13.3k</span>&nbsp;字
             
             
             

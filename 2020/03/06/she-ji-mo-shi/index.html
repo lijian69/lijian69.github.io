@@ -1227,7 +1227,7 @@ public interface Operation {
 <p><strong>动态代理</strong> 是利用 JDK 的API中的 Proxy 类实现的，通过反射动态的在内存中构建代理对象。</p>
 <p><img src="https://images.gitbook.cn/2fb1adc0-4e5d-11ea-8532-814baa40f153" alt="在这里插入图片描述"></p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// java.lang.reflect.Proxy</span>
-<span class="token keyword">static</span> Object <span class="token function">newProxyInstance</span><span class="token punctuation">(</span>ClassLoader loader<span class="token punctuation">,</span> Class<span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token punctuation">[</span><span class="token punctuation">]</span> interfaces<span class="token punctuation">,</span>InvocationHandler h <span class="token punctuation">)</span></code></pre>
+<span class="token keyword">static</span> Object <span class="token function">newProxyInstance</span><span class="token punctuation">(</span>ClassLoader loader<span class="token punctuation">,</span> Class<span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">></span><span class="token punctuation">[</span><span class="token punctuation">]</span> interfaces<span class="token punctuation">,</span>InvocationHandler h <span class="token punctuation">)</span></code></pre>
 <p>注意该方法是在Proxy类中是静态方法,且接收的三个参数依次为:<br><img src="https://images.gitbook.cn/dc22e1a0-4e5d-11ea-a2fb-85c45bbaa11c" alt="在这里插入图片描述"></p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
  * 创建动态的代理对象
@@ -1922,7 +1922,7 @@ public interface Operation {
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.7k</span>&nbsp;字
+                class="white-color">13.3k</span>&nbsp;字
             
             
             
