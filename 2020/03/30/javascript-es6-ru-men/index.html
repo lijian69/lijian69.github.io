@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="阿里 Java 开发手册 -1.5 华山版, 一只帅帅的猿儿">
+    <meta name="keywords" content="JavaScript ES6入门, 一只帅帅的猿儿">
     <meta name="description" content="其实这个世界上大部分传奇，不过是普普通通的人们将心意化成了行动，坚持至极致而已!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>阿里 Java 开发手册 -1.5 华山版 | 一只帅帅的猿儿</title>
+    <title>JavaScript ES6入门 | 一只帅帅的猿儿</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">阿里 Java 开发手册 -1.5 华山版</h1>
+                    <h1 class="description center-align post-title">JavaScript ES6入门</h1>
                 </div>
             </div>
         </div>
@@ -427,16 +427,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
-                            <a href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">
-                                <span class="chip bg-color">开发规范</span>
+                            <a href="/tags/ES6/">
+                                <span class="chip bg-color">ES6</span>
                             </a>
                         
-                            <a href="/tags/%E5%BF%85%E5%A4%87/">
-                                <span class="chip bg-color">必备</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
                     </div>
@@ -447,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%90%8E%E5%8F%B0%E5%BC%80%E5%8F%91/" class="post-category">
-                                后台开发
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                前端开发
                             </a>
                         
                     </div>
@@ -460,28 +460,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-11
+                    2020-03-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-11
+                    2020-03-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    296
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -497,18 +497,162 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>《Java 开发手册》是阿里巴巴集团技术团队的集体智慧结晶和经验总结，经历了多次大规模<br>一线实战的检验及不断完善，公开到业界后，众多社区开发者踊跃参与，共同打磨完善，系统化地<br>整理成册。</p>
-<h2 id="一、编程规约"><a href="#一、编程规约" class="headerlink" title="一、编程规约"></a>一、编程规约</h2><h3 id="（一）命名风格"><a href="#（一）命名风格" class="headerlink" title="（一）命名风格"></a>（一）命名风格</h3><p>1.<font color="red">【强制】</font>代码中的命名均不能以<code>下划线或美元符号</code>开始，也不能以<code>下划线或美元符号</code>结束。</p>
-<blockquote>
-<p>反例：<em>name / __name / $name / name</em> / name$ / name__ </p>
+                <h2 id="第-1-章-变量的用法"><a href="#第-1-章-变量的用法" class="headerlink" title="第 1 章 变量的用法"></a>第 1 章 变量的用法</h2><h3 id="1-1-let-关键字"><a href="#1-1-let-关键字" class="headerlink" title="1.1 let 关键字"></a>1.1 let 关键字</h3><p>let 是<code>块级作用域</code>变量关键字，块级也就是一对大括号。 在 {} 中声明，那么它只能在 {} 中访问。</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// b is not defined</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a is not defined</span></code></pre>
+<p>let 能够防止了循环变量变成全局变量。</p>
+<pre><code>for(let i=0; i &lt; 10; i++){
+
+}
+console.log(i); // i is not defined</code></pre><ul>
+<li>使用 let 变量，没有变量提升。必须先声明后使用</li>
+</ul>
+<p><strong>总结：</strong> 在一个大括号（{}）中，使用 <code>let</code> 关键字声明的变量才具有块级作用域；而 <code>var 不具有</code></p>
+<h3 id="1-2-var-关键字"><a href="#1-2-var-关键字" class="headerlink" title="1.2 var 关键字"></a>1.2 var 关键字</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a is not defined</span></code></pre>
+<h3 id="1-3-const-关键字"><a href="#1-3-const-关键字" class="headerlink" title="1.3 const 关键字"></a>1.3 const 关键字</h3><p>作用：声明常量，常量就是值不可更改。</p>
+<ul>
+<li>具有块级作用域</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 10</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a is not defined</span></code></pre>
+<ul>
+<li>使用 const 声明常量时，<code>必须赋初始值</code>。</li>
+<li>使用 const 声明常量时，值不可修改，<strong>但是可以修改对象或者数组。</strong></li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> PI <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
+PI <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Assignment to constant variable</span></code></pre>
+<h3 id="1-4-let-const-var-的区别"><a href="#1-4-let-const-var-的区别" class="headerlink" title="1.4 let const var 的区别"></a>1.4 let const var 的区别</h3><ol>
+<li>使用 var 声明的变量，其作用域位该语块所在的函数内，并且存在变量的提升现象。</li>
+<li>使用 let 声明的变量，其作用域位还语句所在的代码块中，不存在变量提升。</li>
+<li>使用 const 声明的变量，在后面的出现的代码中不能修改该变量的值。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>var</th>
+<th>let</th>
+<th>const</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>函数级作用域</td>
+<td>块级作用域</td>
+<td>块级作用域</td>
+</tr>
+<tr>
+<td>变量提升</td>
+<td>不存在变量提升</td>
+<td>不存在变量提升</td>
+</tr>
+<tr>
+<td>值可变</td>
+<td>值可变</td>
+<td>值不可变</td>
+</tr>
+</tbody></table>
+<h2 id="第-2-章-解构赋值用法"><a href="#第-2-章-解构赋值用法" class="headerlink" title="第 2 章 解构赋值用法"></a>第 2 章 解构赋值用法</h2><blockquote>
+<p>ES6 中允许从数组中提取值，按照对应的位置，对变量赋值，对象也可以实现解构</p>
 </blockquote>
-<p>2.<font color="red">【强制】</font> 代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式。 </p>
+<h3 id="2-1-数组解构"><a href="#2-1-数组解构" class="headerlink" title="2.1 数组解构"></a>2.1 数组解构</h3><p><strong>注意：</strong><code>解构不成功，变量的值为 undefined</code></p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> ary <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">]</span> <span class="token operator">=</span> ary
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//3</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//undefiend</span></code></pre>
+<h3 id="2-2-对象解构"><a href="#2-2-对象解构" class="headerlink" title="2.2 对象解构"></a>2.2 对象解构</h3><ul>
+<li>方式一</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token string">"zhangsan"</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span>name<span class="token punctuation">,</span>age<span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// `zhangsan`</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span></code></pre>
+<ul>
+<li>方式二</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token string">"zhangsan"</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span>myName<span class="token punctuation">,</span> age<span class="token punctuation">:</span>myAge<span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myName<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// `zhangsan`</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myAge<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span></code></pre>
+<h2 id="第-3-章-箭头函数"><a href="#第-3-章-箭头函数" class="headerlink" title="第 3 章 箭头函数"></a>第 3 章 箭头函数</h2><p>箭头函数是 ES6 新增的定义函数的方式，箭头函数是用来简化函数定义语法的。</p>
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 通常我们给函数起一个名字</span>
+<span class="token keyword">const</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <blockquote>
-<p><code>说明：</code>正确的英文拼写和语法可以让阅读者易于理解，避免歧义。注意，纯拼音命名方式更要避免采用。    </p>
-<p><code>正例：</code>renminbi / alibaba / taobao / youku / hangzhou 等国际通用的名称，可视同英文。    </p>
-<p><code>反例：</code>DaZhePromotion [打折] / getPingfenByName() [评分] / int 某变量 = 3</p>
+<p>若函数体内只有一句代码，且代码的执行结果是有返回值的，可以忽略大括号，若形参的个数只有一个，小括号也可以省略</p>
 </blockquote>
-<script>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span>num2<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//传统函数</span>
+    <span class="token keyword">return</span> num1 <span class="token operator">+</span> num2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> sum <span class="token operator">=</span> <span class="token punctuation">(</span>num1<span class="token punctuation">,</span>num2<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> num1 <span class="token operator">+</span> num2<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//箭头函数</span>
+
+<span class="token keyword">const</span> fn2 <span class="token operator">=</span> v <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>箭头函数不绑定 this 关键字，箭头函数中的 this 指向 <code>函数定义位置的上下文 this</code>；</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    age <span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+    say <span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 100 对象是不能产生作用域的</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+object<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2 id="第-4-章-剩余参数"><a href="#第-4-章-剩余参数" class="headerlink" title="第 4 章 剩余参数"></a>第 4 章 剩余参数</h2><p>与 Java 的多参数 类似；</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">sum</span><span class="token punctuation">(</span><span class="token string">'加法'</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> sum <span class="token operator">=</span> <span class="token punctuation">(</span>title<span class="token punctuation">,</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> total <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    args<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span>index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        total <span class="token operator">+</span><span class="token operator">=</span> item<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>剩余参数，还可以和解构配合使用</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> students <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'wangwu'</span><span class="token punctuation">,</span><span class="token string">'zhangsan'</span><span class="token punctuation">,</span><span class="token string">'lisi'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> <span class="token punctuation">[</span>s1<span class="token punctuation">,</span><span class="token operator">...</span>s2<span class="token punctuation">]</span> <span class="token operator">=</span> students<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 'wangwu'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// ['zhangsan','lisi'] Array[2]</span></code></pre>
+<h3 id="4-1-Array-的拓展方法"><a href="#4-1-Array-的拓展方法" class="headerlink" title="4.1 Array 的拓展方法"></a>4.1 Array 的拓展方法</h3><p>拓展运算符可以将数组或者对象转为用逗号分割的参数序列。</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> ary <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token operator">...</span>ary <span class="token comment" spellcheck="true">//1,2,3</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>ary<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 1 2 3 这里没有逗号</span></code></pre>
+<ul>
+<li>拓展运算符 可以应用于合并数组</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 方式一</span>
+<span class="token keyword">let</span> ary1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> ary2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span>
+<span class="token operator">...</span>ary1 <span class="token comment" spellcheck="true">// 1,2,3</span>
+<span class="token operator">...</span>ary2 <span class="token comment" spellcheck="true">// 4,5,6</span>
+<span class="token keyword">let</span> ary3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>ary1<span class="token punctuation">,</span> <span class="token operator">...</span>ary2<span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true">// 方式二</span>
+ary1<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">...</span>ary2<span class="token punctuation">)</span></code></pre>
+<ul>
+<li>拓展运算符 可以将伪数组转换为真正的数组</li>
+</ul>
+<pre><code>var oDiv = document.getElementsByTagName('div');
+console.log(oDiv);
+var ary = [...oDiv]
+ary.push('a')</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -551,7 +695,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lijiangit.gitee.io/2020/03/11/a-li-ba-ba-dai-ma-gui-fan/">http://lijiangit.gitee.io/2020/03/11/a-li-ba-ba-dai-ma-gui-fan/</a>
+                    <a href="http://lijiangit.gitee.io/2020/03/30/javascript-es6-ru-men/">http://lijiangit.gitee.io/2020/03/30/javascript-es6-ru-men/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -589,16 +733,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
-                                <a href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">
-                                    <span class="chip bg-color">开发规范</span>
+                                <a href="/tags/ES6/">
+                                    <span class="chip bg-color">ES6</span>
                                 </a>
                             
-                                <a href="/tags/%E5%BF%85%E5%A4%87/">
-                                    <span class="chip bg-color">必备</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
                         </div>
@@ -769,7 +913,7 @@
         repo: 'https://github.com/lijian69/lijian69.github.io.git',
         owner: 'lijian69',
         admin: "lijian69",
-        id: '2020-03-11T15-01-41',
+        id: '2020-03-30T09-50-38',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -790,56 +934,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/12/react-ru-men-xue-xi/">
+                <a href="/2020/03/30/javascript-es6-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="React 学习">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="JavaScript ES6入门">
                         
-                        <span class="card-title">React 学习</span>
+                        <span class="card-title">JavaScript ES6入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            React 的学习
-react 有一个组件库 https://ant.design/
-
-引入组件库 UI
-npm install -D antd
-// 按需引入
-npm install -D babel-plugin-import修改配置文
+                            第 1 章 变量的用法1.1 let 关键字let 是块级作用域变量关键字，块级也就是一对大括号。 在 {} 中声明，那么它只能在 {} 中访问。
+if(true){
+    let a = 10;
+    if(true){
+      
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                    前端开发
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
-                    <a href="/tags/nodejs/">
-                        <span class="chip bg-color">nodejs</span>
+                    <a href="/tags/ES6/">
+                        <span class="chip bg-color">ES6</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
@@ -853,52 +1001,36 @@ npm install -D babel-plugin-import修改配置文
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/06/leetcode/">
+                <a href="/2020/03/17/lombda-yi-pian-jiu-gou-liao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="LeetCode 编程进阶">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Lombda一篇就够了">
                         
-                        <span class="card-title">LeetCode 编程进阶</span>
+                        <span class="card-title">Lombda一篇就够了</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            LeetCode收录了许多互联网公司的算法题目，被称为刷题神器。如果是为了面试，刷Leetcode还是很重要的。一是提高对简单题的熟悉程度，有一些听起来很轻松的题目，比如旋转矩阵，写过一次和没写过的临场表现可能会有很大的差距；二是可以见识一
+                            collect 流转换
+将流转换为list。还有toSet()，toMap()等。及早求值。
+
+ List&lt;Student> studentList = Stream.of(new Student("路飞", 22, 175),
+  
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-17
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Lijian
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
-                    </a>
-                    
-                    <a href="/tags/LeetCode/">
-                        <span class="chip bg-color">LeetCode</span>
-                    </a>
-                    
                 </div>
                 
             </div>
