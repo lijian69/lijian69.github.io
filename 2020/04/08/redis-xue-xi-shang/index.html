@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript ES6入门, 一只帅帅的猿儿">
+    <meta name="keywords" content="Redis 学习, 一只帅帅的猿儿">
     <meta name="description" content="其实这个世界上大部分传奇，不过是普普通通的人们将心意化成了行动，坚持至极致而已!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>JavaScript ES6入门 | 一只帅帅的猿儿</title>
+    <title>Redis 学习 | 一只帅帅的猿儿</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript ES6入门</h1>
+                    <h1 class="description center-align post-title">Redis 学习</h1>
                 </div>
             </div>
         </div>
@@ -427,16 +427,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JavaScript/">
-                                <span class="chip bg-color">JavaScript</span>
+                            <a href="/tags/redis/">
+                                <span class="chip bg-color">redis</span>
                             </a>
                         
-                            <a href="/tags/ES6/">
-                                <span class="chip bg-color">ES6</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                <span class="chip bg-color">前端</span>
+                            <a href="/tags/nosql/">
+                                <span class="chip bg-color">nosql</span>
                             </a>
                         
                     </div>
@@ -447,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
-                                前端开发
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                后端
                             </a>
                         
                     </div>
@@ -460,28 +456,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-30
+                    2020-04-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-30
+                    2020-04-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    11 分
                 </div>
                 
 
@@ -497,162 +493,219 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第-1-章-变量的用法"><a href="#第-1-章-变量的用法" class="headerlink" title="第 1 章 变量的用法"></a>第 1 章 变量的用法</h2><h3 id="1-1-let-关键字"><a href="#1-1-let-关键字" class="headerlink" title="1.1 let 关键字"></a>1.1 let 关键字</h3><p>let 是<code>块级作用域</code>变量关键字，块级也就是一对大括号。 在 {} 中声明，那么它只能在 {} 中访问。</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// b is not defined</span>
-<span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a is not defined</span></code></pre>
-<p>let 能够防止了循环变量变成全局变量。</p>
-<pre><code>for(let i=0; i &lt; 10; i++){
-
-}
-console.log(i); // i is not defined</code></pre><ul>
-<li>使用 let 变量，没有变量提升。必须先声明后使用</li>
-</ul>
-<p><strong>总结：</strong> 在一个大括号（{}）中，使用 <code>let</code> 关键字声明的变量才具有块级作用域；而 <code>var 不具有</code></p>
-<h3 id="1-2-var-关键字"><a href="#1-2-var-关键字" class="headerlink" title="1.2 var 关键字"></a>1.2 var 关键字</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a is not defined</span></code></pre>
-<h3 id="1-3-const-关键字"><a href="#1-3-const-关键字" class="headerlink" title="1.3 const 关键字"></a>1.3 const 关键字</h3><p>作用：声明常量，常量就是值不可更改。</p>
-<ul>
-<li>具有块级作用域</li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 10</span>
-<span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a is not defined</span></code></pre>
-<ul>
-<li>使用 const 声明常量时，<code>必须赋初始值</code>。</li>
-<li>使用 const 声明常量时，值不可修改，<strong>但是可以修改对象或者数组。</strong></li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> PI <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
-PI <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Assignment to constant variable</span></code></pre>
-<h3 id="1-4-let-const-var-的区别"><a href="#1-4-let-const-var-的区别" class="headerlink" title="1.4 let const var 的区别"></a>1.4 let const var 的区别</h3><ol>
-<li>使用 var 声明的变量，其作用域位该语块所在的函数内，并且存在变量的提升现象。</li>
-<li>使用 let 声明的变量，其作用域位还语句所在的代码块中，不存在变量提升。</li>
-<li>使用 const 声明的变量，在后面的出现的代码中不能修改该变量的值。</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>var</th>
-<th>let</th>
-<th>const</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>函数级作用域</td>
-<td>块级作用域</td>
-<td>块级作用域</td>
-</tr>
-<tr>
-<td>变量提升</td>
-<td>不存在变量提升</td>
-<td>不存在变量提升</td>
-</tr>
-<tr>
-<td>值可变</td>
-<td>值可变</td>
-<td>值不可变</td>
-</tr>
-</tbody></table>
-<h2 id="第-2-章-解构赋值用法"><a href="#第-2-章-解构赋值用法" class="headerlink" title="第 2 章 解构赋值用法"></a>第 2 章 解构赋值用法</h2><blockquote>
-<p>ES6 中允许从数组中提取值，按照对应的位置，对变量赋值，对象也可以实现解构</p>
-</blockquote>
-<h3 id="2-1-数组解构"><a href="#2-1-数组解构" class="headerlink" title="2.1 数组解构"></a>2.1 数组解构</h3><p><strong>注意：</strong><code>解构不成功，变量的值为 undefined</code></p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> ary <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">]</span> <span class="token operator">=</span> ary
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//2</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//3</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//undefiend</span></code></pre>
-<h3 id="2-2-对象解构"><a href="#2-2-对象解构" class="headerlink" title="2.2 对象解构"></a>2.2 对象解构</h3><ul>
-<li>方式一</li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token string">"zhangsan"</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> <span class="token punctuation">{</span>name<span class="token punctuation">,</span>age<span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// `zhangsan`</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span></code></pre>
-<ul>
-<li>方式二</li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token string">"zhangsan"</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span>myName<span class="token punctuation">,</span> age<span class="token punctuation">:</span>myAge<span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myName<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// `zhangsan`</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myAge<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span></code></pre>
-<h2 id="第-3-章-箭头函数"><a href="#第-3-章-箭头函数" class="headerlink" title="第 3 章 箭头函数"></a>第 3 章 箭头函数</h2><p>箭头函数是 ES6 新增的定义函数的方式，箭头函数是用来简化函数定义语法的。</p>
-<pre class=" language-js"><code class="language-js"><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">// 通常我们给函数起一个名字</span>
-<span class="token keyword">const</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+                <h3 id="List-数据类型"><a href="#List-数据类型" class="headerlink" title="List 数据类型"></a>List 数据类型</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>​    List 类型是一个链表解构的集合，其中主要有 push、pop、获取元素等，更详细的说，list类型是一个双端链表的节后，我们可以通过相关的操作井陉集合的头部或者尾部添加和删除元素，list 的设计非常简单精巧，既可以作为栈、也可以作为队列使用。</p>
 <blockquote>
-<p>若函数体内只有一句代码，且代码的执行结果是有返回值的，可以忽略大括号，若形参的个数只有一个，小括号也可以省略</p>
+<p>按照插入顺序排序，你可以添加一个元素到列表的头部（左边）或者链表的尾部（右边）。一个列表最多包含   2^32 -1 个元素</p>
 </blockquote>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span>num2<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//传统函数</span>
-    <span class="token keyword">return</span> num1 <span class="token operator">+</span> num2<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><h5 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h5><pre><code>lpush key value1 [values ...] : 将一个或者多个值插入到列表头部（左侧）
+rpush key value1 [values ...] : 将一个或者多个值插入到列表尾部（右侧）
+lpushx key value : 将一个值插入到已经存在的列表头部，如果列表不存在 操作无效
+rpushx key value : 将一个值插入到已经存在的列表尾部，如果列表不存在 操作无效</code></pre><h5 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h5><pre><code>llen key : 获取列表长度
+lindex key index 通过索引获取列表的元素
+lrange key start end 获取李彪指定范围的元素 lrange list_key 0 -1</code></pre><blockquote>
+<p>描述：返回列表中指定区间的元素，区间以偏移量 start end 决定。</p>
+<p>也可使用负数 -1 代表列表的最后一个元素，-2 代表列表的倒数第二个元素 ，以此类推。</p>
+</blockquote>
+<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><pre><code>lpop list_key 左侧删除
+rpop list_key 右侧删除
 
-<span class="token keyword">const</span> sum <span class="token operator">=</span> <span class="token punctuation">(</span>num1<span class="token punctuation">,</span>num2<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> num1 <span class="token operator">+</span> num2<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//箭头函数</span>
+堵塞的弹出
+blpop list_key [keys ...] timeout 移除并且获取列表的第一个元素，如果列表没有数据，并且堵塞列表，知道列表中有数据，并且弹出元素为止，超时返回 nil
+brpop list_key [keys ...] timeout
 
-<span class="token keyword">const</span> fn2 <span class="token operator">=</span> v <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>箭头函数不绑定 this 关键字，箭头函数中的 this 指向 <code>函数定义位置的上下文 this</code>；</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
-    age <span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
-    say <span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 100 对象是不能产生作用域的</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-object<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h2 id="第-4-章-剩余参数"><a href="#第-4-章-剩余参数" class="headerlink" title="第 4 章 剩余参数"></a>第 4 章 剩余参数</h2><p>与 Java 的多参数 类似；</p>
-<pre class=" language-js"><code class="language-js"><span class="token function">sum</span><span class="token punctuation">(</span><span class="token string">'加法'</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> sum <span class="token operator">=</span> <span class="token punctuation">(</span>title<span class="token punctuation">,</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> total <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    args<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span>index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        total <span class="token operator">+</span><span class="token operator">=</span> item<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span></code></pre>
-<p>剩余参数，还可以和解构配合使用</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> students <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'wangwu'</span><span class="token punctuation">,</span><span class="token string">'zhangsan'</span><span class="token punctuation">,</span><span class="token string">'lisi'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> <span class="token punctuation">[</span>s1<span class="token punctuation">,</span><span class="token operator">...</span>s2<span class="token punctuation">]</span> <span class="token operator">=</span> students<span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 'wangwu'</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// ['zhangsan','lisi'] Array[2]</span></code></pre>
-<h3 id="4-1-Array-的拓展方法"><a href="#4-1-Array-的拓展方法" class="headerlink" title="4.1 Array 的拓展方法"></a>4.1 Array 的拓展方法</h3><p>拓展运算符可以将数组或者对象转为用逗号分割的参数序列。</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> ary <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
-<span class="token operator">...</span>ary <span class="token comment" spellcheck="true">//1,2,3</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>ary<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 1 2 3 这里没有逗号</span></code></pre>
+ltrim key start end 对一个列表进行 裁剪 留下 [start,end] 的数据</code></pre><h5 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h5><pre><code>lset key index value : 修改某一列表的下标为 index 的值
+linsert key bafore|after word value 在某一列表值为 word 之前或者之后插入 value 值 </code></pre><h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><pre><code>rpoplpush l1_key l2_key 将 l1 弹出的数据 插入到 l2 列表中
+rpoplpush l1 l1</code></pre><h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><p><strong>项目常用于：1、对数据量大的集合数据删减 2、任务队列</strong></p>
+<p><strong>1、对数据量大的集合数据删减</strong></p>
+<p>列表数据显示、关注列表、粉丝列表、留言评价等 分页、热点新闻（TOP5）等</p>
+<p>利用 <code>lrange</code> 可以方便的实现分页功能。</p>
+<p>2、任务列表</p>
+<h2 id="Redis-多数据库"><a href="#Redis-多数据库" class="headerlink" title="Redis 多数据库"></a>Redis 多数据库</h2><p>在 redis 中，数据库是由一个整数索引标识，而不是数据库名称，默认情况下  数据库连接0</p>
+<p><strong>database 16 // (0 - 15)</strong></p>
+<p><strong>select 0 // 进行切换</strong></p>
+<p>移动数据到某一个数据库中</p>
+<pre><code>move key 数据库</code></pre><p>数据库清空</p>
+<pre><code>flushdb 当前数据库
+flushall 所有数据库</code></pre><h2 id="Redis-事务"><a href="#Redis-事务" class="headerlink" title="Redis 事务"></a>Redis 事务</h2><p>redis 事务可以一次执行多个命令，按顺序的串行化执行，执行中不会被其他命令所影响。</p>
+<h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><blockquote>
+<p>批量操作在 wxec 命令前被放入队列缓存中</p>
+</blockquote>
+<ol>
+<li><strong>Redis 会将一个事务中的所有命令序列化，按顺序执行</strong></li>
+<li><strong>执行中不会被其他命令插入，不许出现加塞行为</strong></li>
+<li><strong>不支持事务回滚</strong></li>
+</ol>
+<h3 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h3><pre><code>discard
+    : 取消事务，放弃执行事务块内的所以命令
+exec
+    : 执行所有事务块内的命令
+multi
+    : 标记一个事务块的开始
+unwatch
+    : 取消 watch 命令对所有 key 的监视
+watch key [keys ...] 
+    : 监视一个或者多个key，如果事务执行之前被其他命令所改动，事务被打断</code></pre><p>一个事务从开始到执行的三个阶段</p>
 <ul>
-<li>拓展运算符 可以应用于合并数组</li>
+<li>开始事务 multi </li>
+<li>命令序列化，入队</li>
+<li>执行事务 exec</li>
 </ul>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 方式一</span>
-<span class="token keyword">let</span> ary1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
-<span class="token keyword">let</span> ary2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span>
-<span class="token operator">...</span>ary1 <span class="token comment" spellcheck="true">// 1,2,3</span>
-<span class="token operator">...</span>ary2 <span class="token comment" spellcheck="true">// 4,5,6</span>
-<span class="token keyword">let</span> ary3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>ary1<span class="token punctuation">,</span> <span class="token operator">...</span>ary2<span class="token punctuation">]</span>
+<p><img src="./images/redis/redis-trans.jpg" alt="redis 事务"></p>
+<h3 id="实例1-multi-exec"><a href="#实例1-multi-exec" class="headerlink" title="实例1 multi exec"></a>实例1 multi exec</h3><p>转账功能，A 向 B 转账 50 块钱</p>
+<pre class=" language-shell"><code class="language-shell"># 开启事务
+127.0.0.1:6379> multi 
+OK
+127.0.0.1:6379> get account:a
+QUEUED
+127.0.0.1:6379> get account:b
+QUEUED
+127.0.0.1:6379> decrby account:a 50
+QUEUED
+127.0.0.1:6379> incrby account:b 50
+QUEUED
+# exec:执行事务;  discard:取消事务
+127.0.0.1:6379> exec
+1) "100"
+2) "100"
+3) (integer) 50
+4) (integer) 150</code></pre>
+<h3 id="实例3-事务的错误处理"><a href="#实例3-事务的错误处理" class="headerlink" title="实例3 事务的错误处理"></a>实例3 事务的错误处理</h3><p><strong>事务的错误处理：</strong> </p>
+<p>如果执行的某个命令报出错误，则只有报错的命令不会执行，其他命令正常执行，<code>且不会回滚</code></p>
+<pre class=" language-shell"><code class="language-shell">127.0.0.1:6379> MULTI
+OK
+127.0.0.1:6379> set lijian lijian
+QUEUED
+127.0.0.1:6379> get lijian
+QUEUED
+127.0.0.1:6379> INCR lijian
+QUEUED
+127.0.0.1:6379> EXEC
+1) OK
+2) "lijian"
+3) (error) ERR value is not an integer or out of range</code></pre>
+<h3 id="实例4-事务中-命令有错误"><a href="#实例4-事务中-命令有错误" class="headerlink" title="实例4 事务中 命令有错误"></a>实例4 事务中 命令有错误</h3><p>如果事务开启后，某个命令出现语法错误，整个事务都被取消，事务执行失败</p>
+<pre class=" language-shell"><code class="language-shell">127.0.0.1:6379> MULTI
+OK
+127.0.0.1:6379> set li key
+QUEUED
+127.0.0.1:6379> asdfksalfm asdfnl
+(error) ERR unknown command `asdfksalfm`, with args beginning with: `asdfnl`, 
+127.0.0.1:6379> exec
+(error) EXECABORT Transaction discarded because of previous errors.
+127.0.0.1:6379> get li
+(nil)</code></pre>
+<h3 id="实例5-事务的Watch"><a href="#实例5-事务的Watch" class="headerlink" title="实例5  事务的Watch"></a>实例5  事务的Watch</h3><pre><code>watch key [keys ...] 监视一个或者多个key 如果事务执行之前 key 被其他命令改变，那么事务将被打断</code></pre><p><strong>需求</strong> 某一个账户在一事务内进行操作，在提交事务之前，另一个账户对账户进行了操作</p>
+<pre class=" language-shell"><code class="language-shell"># 客户端 1
+127.0.0.1:6379> keys * 
+1) "account:a"
+127.0.0.1:6379> watch account:a
+OK
+127.0.0.1:6379> MULTI
+OK
+127.0.0.1:6379> INCRBY account:a 50
+QUEUED
+# 执行之前 客户端 2 进行了数据修改
+127.0.0.1:6379> exec
+(nil)
 
-<span class="token comment" spellcheck="true">// 方式二</span>
-ary1<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">...</span>ary2<span class="token punctuation">)</span></code></pre>
+
+# 客户端 2
+127.0.0.1:6379> set account:a 20
+OK
+127.0.0.1:6379> get account:a
+"20"
+127.0.0.1:6379> keys *
+1) "account:a"</code></pre>
+<h4 id="应用场景-1"><a href="#应用场景-1" class="headerlink" title="应用场景"></a>应用场景</h4><p>​    一组命令，要不全部执行，要不全不执行。</p>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>秒杀</p>
+<pre><code>商品秒杀 14:00 秒杀100步手机
+key: 存放100 手机编号
+
+秒杀流程：
+    1. 如果秒杀成功；用户名 存入、抢成功的手机编号得到，存放在 list 中
+    2. 在初始化 商品库中 移除抢到的手机编号。
+    以上应该是一个事务。</code></pre><h2 id="Redis-持久化技术"><a href="#Redis-持久化技术" class="headerlink" title="Redis 持久化技术"></a>Redis 持久化技术</h2><h3 id="RDB"><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h3><p>rdb 是 Redis DataBase缩写</p>
+<p>功能核心函数 rdbSave（生成RDB文件）和rdbLoad（从文件加载到内存）两个函数</p>
+<p><strong>优点：</strong> 是redis 的默认持久化机制，快照保存数据级快，还原数据级快，适用于灾难备份</p>
+<p><strong>缺点：</strong> 小内存机器不适合使用，RDB机制符合要求就会进行快照，数据容易丢失</p>
+<p><strong>快照条件</strong></p>
+<blockquote>
+<p>1、服务器正常关闭时 ./bin/redis-cli shutdown</p>
+<p>2、key满足一定条件，会进行快照，vim redis.conf 搜索 save</p>
+<p>​    save 900 1</p>
+<p>​    save 300 10</p>
+<p>​    save 60 10000</p>
+</blockquote>
+<h3 id="AOF"><a href="#AOF" class="headerlink" title="AOF"></a>AOF</h3><p>由于快照方式在一定间隔时间做一次，如果redis 突然意外 down 掉的话，就会丢失最后一次快照后的所有修改，如果应用要求不能丢失任何修改的话，可以采用 aof 持久化机制。</p>
+<p>Append-Only file ：AOF 比快照有更好的持久化性，是由于在使用 aof 持久化方式时，redis会将每一个收到的 <code>写命令</code> 都会通过 <code>write 函数</code>追加到文件中（appendonly.aof）。当 redis 重启时会通过重新执行文件中保存的写命令来在内存中重建整个数据库的内容</p>
+<p><strong>每当执行服务器任务时或者函数时 flushAppendOnlyFile 函数都会调用，这个函数执行以下两个工作 aof 写入保存</strong></p>
+<ol>
+<li>Write 根据条件 将 aof_buf 的缓存写入到 AOF 文件</li>
+<li>SAVE 根据条件，调用 fsync 或者 fdatasync 函数 将 AOF 文件保存到磁盘中</li>
+</ol>
+<p><strong>有三种方式如下：（默认每秒 fsync 一次）</strong></p>
 <ul>
-<li>拓展运算符 可以将伪数组转换为真正的数组</li>
+<li>appendonly yes</li>
+<li>#appendfsync always // 收到写命令就立即写入磁盘，最慢，但是保证数据完全持久化</li>
+<li>appendfsync everysec // 每秒写入磁盘一次</li>
+<li>#appendfsync no // 完全依赖os 性能最好，持久化没保证</li>
 </ul>
-<pre><code>var oDiv = document.getElementsByTagName('div');
-console.log(oDiv);
-var ary = [...oDiv]
-ary.push('a')</code></pre><script>
+<p><strong>产生的问题</strong></p>
+<p>aof 文件会越来越大，产生很多冗余无用的记录</p>
+<h3 id="Redis-恢复机制"><a href="#Redis-恢复机制" class="headerlink" title="Redis 恢复机制"></a>Redis 恢复机制</h3><p><img src="./images/redis/redis-aof-rdb.jpg" alt="redis 恢复机制"></p>
+<h2 id="Redis-缓存和数据一致性"><a href="#Redis-缓存和数据一致性" class="headerlink" title="Redis 缓存和数据一致性"></a>Redis 缓存和数据一致性</h2><h3 id="1、实时同步"><a href="#1、实时同步" class="headerlink" title="1、实时同步"></a>1、实时同步</h3><p>对强一致性要求比较高，采用实时同步方案，即查询缓存，查询不到再从DB查询，保存到缓存；更新缓存时，先更新数据库，再将缓存的设置过期</p>
+<p>@Cacheable ： 查询时使用 注意 Long 类型需要转换为String类型，否则抛异常。‘</p>
+<p>@CachePut ：更新时候使用，使用此注解，一定会从DB 查询数据</p>
+<p>@CacheEvict ： 删除时使用</p>
+<p>@Caching ：组合用法</p>
+<h3 id="2、异步队列"><a href="#2、异步队列" class="headerlink" title="2、异步队列"></a>2、异步队列</h3><p>对于并发程度较高的，可采用异步队列的方式同步，可采用 kafka等消息中间件处理消息生产和消费。</p>
+<p><strong>案例</strong></p>
+<blockquote>
+<p>一个文章，点赞数量，一天 100万点赞</p>
+<p>每天凌晨定时任务，写入到 Mysql 中。</p>
+<p>电商网站：</p>
+<p>​    注册完成 –&gt; </p>
+<p>​      1.  邮箱发送注册成功</p>
+<pre><code>                            2. 手机号发送验证码
+                               3. 将注册信息插入到数据库中</code></pre></blockquote>
+<p>异步队列：解耦、异步、削峰</p>
+<h3 id="3、使用阿里的同步工具-canal"><a href="#3、使用阿里的同步工具-canal" class="headerlink" title="3、使用阿里的同步工具 canal"></a>3、使用阿里的同步工具 canal</h3><p><img src="./images/redis/canal.png" alt="canal"></p>
+<p><strong>Canal 工作原理</strong></p>
+<p><img src="./images/redis/canal2.png" alt="canal 工作原理"></p>
+<h3 id="4、采用-UDF-自定义函数编写"><a href="#4、采用-UDF-自定义函数编写" class="headerlink" title="4、采用 UDF 自定义函数编写"></a>4、采用 UDF 自定义函数编写</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="穿透"><a href="#穿透" class="headerlink" title="穿透"></a>穿透</h3><p><strong>缓存穿透是指查询一个一定不存在的数据，由于缓存是不命中需要从数据库查询，查询不到数据则不写入缓存，这将导致这个不存在的数据每次请求都要到数据库中去查询，造成了缓存穿透</strong></p>
+<p><strong>解决方法</strong> 持久层查询不到就缓存空结果，查询时先判断缓存中是否 exists key ，如果有直接返回空，没有则查询后返回。</p>
+<p><code>注意：insert 时需要清除查询的key</code></p>
+<pre><code>redis key 是否存在
+    如果不存在
+        查询数据库 mysql insert into ...123  redis.set(key,123对象)
+        存入redis 并且返回
+        redis.set(key,"null")
+    如果存在
+        查询redis 并返回
+---------------在传参的url中 进行加密设置
+localhost:8080/user?id=123
+localhost:8080/user?id=asdf;sladkfs 后台就会解密失败
+放置 不存在的数据查询</code></pre><h3 id="雪崩"><a href="#雪崩" class="headerlink" title="雪崩"></a>雪崩</h3><p><strong>雪崩: 缓存大量失效的问题，引发大量的查询数据库</strong></p>
+<p><strong>解决方法</strong></p>
+<ul>
+<li>用锁/分布式 或者队列串行访问</li>
+<li>缓存失效时间均匀分布</li>
+</ul>
+<blockquote>
+<p>如果缓存集中在一个时间内失效，发生了大量的缓存穿透，所有的查询都落在了数据库上，造成了缓存雪崩</p>
+<p>这个没有完美的解决方法，但可以分析用户行为，尽量让失效的时间点均匀分布，大多数系统设计者考虑加锁或者队列的方式保证缓存在单线程写，从而避免失效时大量的并发请求落在底层存储系统上。</p>
+</blockquote>
+<h3 id="预热"><a href="#预热" class="headerlink" title="预热"></a>预热</h3><p>可以通过缓存 reload 机制，预先去更新缓存，在即将发生大量并发访问前手动触发加载缓存不同的key，设置不同的过期时间，让缓存失效的时间点尽量均匀</p>
+<h3 id="热点-Key"><a href="#热点-Key" class="headerlink" title="热点 Key"></a>热点 Key</h3><p><strong>热点 key ：某一个key访问非常频繁，当key失效的时候有大量线程来构建缓存，导致负载增加，系统崩溃</strong></p>
+<p><strong>解决方法：</strong></p>
+<ol>
+<li>使用锁，单机使用 synchronize，lock 等 分布式使用分布式锁</li>
+<li>缓存过期时间不设置，而设置 在key 对应的value 里，如果检测到存的时间超过过期时间则异步更新缓存</li>
+<li>在value设置一个比过期时间t0小的过期时间值t1，当t1过期的时候，延长t1并做更新缓存操作。</li>
+<li>设置标签缓存，标签缓存设置过期时间，标签缓存过期后，需要异步的更新实际缓存</li>
+</ol>
+<p><img src="./images/redis/lock.png" alt="双重锁实现数据查询"></p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -695,7 +748,7 @@ ary.push('a')</code></pre><script>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lijiangit.gitee.io/2020/03/30/javascript-es6-ru-men/">http://lijiangit.gitee.io/2020/03/30/javascript-es6-ru-men/</a>
+                    <a href="http://lijiangit.gitee.io/2020/04/08/redis-xue-xi-shang/">http://lijiangit.gitee.io/2020/04/08/redis-xue-xi-shang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -733,16 +786,12 @@ ary.push('a')</code></pre><script>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JavaScript/">
-                                    <span class="chip bg-color">JavaScript</span>
+                                <a href="/tags/redis/">
+                                    <span class="chip bg-color">redis</span>
                                 </a>
                             
-                                <a href="/tags/ES6/">
-                                    <span class="chip bg-color">ES6</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                    <span class="chip bg-color">前端</span>
+                                <a href="/tags/nosql/">
+                                    <span class="chip bg-color">nosql</span>
                                 </a>
                             
                         </div>
@@ -913,7 +962,7 @@ ary.push('a')</code></pre><script>
         repo: 'https://github.com/lijian69/lijian69.github.io.git',
         owner: 'lijian69',
         admin: "lijian69",
-        id: '2020-03-30T09-50-38',
+        id: '2020-04-08T08-34-07',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -938,19 +987,22 @@ ary.push('a')</code></pre><script>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/08/redis-xue-xi-shang/">
+                <a href="/2020/04/08/redis-xue-xi-xia/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Redis 学习">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Redis 高级学习篇">
                         
-                        <span class="card-title">Redis 学习</span>
+                        <span class="card-title">Redis 高级学习篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            List 数据类型简介​    List 类型是一个链表解构的集合，其中主要有 push、pop、获取元素等，更详细的说，list类型是一个双端链表的节后，我们可以通过相关的操作井陉集合的头部或者尾部添加和删除元素，list 的设计非常简单
+                            Redis 高级配置一 可能存在的问题一般来说，要将 Redis 运用于在项目上，只是用一台 Redis 是万万不能的，原因如下：
+
+从结构上，单个 Redis 服务器会发生单点故障，并且一台服务器需要处理所有的请求负载，压力比较大。
+从容
                         
                     </div>
                     <div class="publish-info">
@@ -991,36 +1043,56 @@ ary.push('a')</code></pre><script>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/17/lombda-yi-pian-jiu-gou-liao/">
+                <a href="/2020/03/30/javascript-es6-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Lombda一篇就够了">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="JavaScript ES6入门">
                         
-                        <span class="card-title">Lombda一篇就够了</span>
+                        <span class="card-title">JavaScript ES6入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            collect 流转换
-将流转换为list。还有toSet()，toMap()等。及早求值。
-
- List&lt;Student> studentList = Stream.of(new Student("路飞", 22, 175),
-  
+                            第 1 章 变量的用法1.1 let 关键字let 是块级作用域变量关键字，块级也就是一对大括号。 在 {} 中声明，那么它只能在 {} 中访问。
+if(true){
+    let a = 10;
+    if(true){
+      
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-30
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Lijian
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                    前端开发
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/ES6/">
+                        <span class="chip bg-color">ES6</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
                 </div>
                 
             </div>

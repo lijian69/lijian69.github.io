@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript ES6入门, 一只帅帅的猿儿">
+    <meta name="keywords" content="Redis 高级学习篇, 一只帅帅的猿儿">
     <meta name="description" content="其实这个世界上大部分传奇，不过是普普通通的人们将心意化成了行动，坚持至极致而已!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>JavaScript ES6入门 | 一只帅帅的猿儿</title>
+    <title>Redis 高级学习篇 | 一只帅帅的猿儿</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript ES6入门</h1>
+                    <h1 class="description center-align post-title">Redis 高级学习篇</h1>
                 </div>
             </div>
         </div>
@@ -427,16 +427,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JavaScript/">
-                                <span class="chip bg-color">JavaScript</span>
+                            <a href="/tags/redis/">
+                                <span class="chip bg-color">redis</span>
                             </a>
                         
-                            <a href="/tags/ES6/">
-                                <span class="chip bg-color">ES6</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                <span class="chip bg-color">前端</span>
+                            <a href="/tags/nosql/">
+                                <span class="chip bg-color">nosql</span>
                             </a>
                         
                     </div>
@@ -447,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
-                                前端开发
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                后端
                             </a>
                         
                     </div>
@@ -460,28 +456,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-30
+                    2020-04-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-30
+                    2020-04-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    12 分
                 </div>
                 
 
@@ -497,162 +493,184 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第-1-章-变量的用法"><a href="#第-1-章-变量的用法" class="headerlink" title="第 1 章 变量的用法"></a>第 1 章 变量的用法</h2><h3 id="1-1-let-关键字"><a href="#1-1-let-关键字" class="headerlink" title="1.1 let 关键字"></a>1.1 let 关键字</h3><p>let 是<code>块级作用域</code>变量关键字，块级也就是一对大括号。 在 {} 中声明，那么它只能在 {} 中访问。</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// b is not defined</span>
-<span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a is not defined</span></code></pre>
-<p>let 能够防止了循环变量变成全局变量。</p>
-<pre><code>for(let i=0; i &lt; 10; i++){
-
-}
-console.log(i); // i is not defined</code></pre><ul>
-<li>使用 let 变量，没有变量提升。必须先声明后使用</li>
-</ul>
-<p><strong>总结：</strong> 在一个大括号（{}）中，使用 <code>let</code> 关键字声明的变量才具有块级作用域；而 <code>var 不具有</code></p>
-<h3 id="1-2-var-关键字"><a href="#1-2-var-关键字" class="headerlink" title="1.2 var 关键字"></a>1.2 var 关键字</h3><pre class=" language-js"><code class="language-js"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a is not defined</span></code></pre>
-<h3 id="1-3-const-关键字"><a href="#1-3-const-关键字" class="headerlink" title="1.3 const 关键字"></a>1.3 const 关键字</h3><p>作用：声明常量，常量就是值不可更改。</p>
-<ul>
-<li>具有块级作用域</li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span>
-    <span class="token punctuation">}</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 10</span>
-<span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a is not defined</span></code></pre>
-<ul>
-<li>使用 const 声明常量时，<code>必须赋初始值</code>。</li>
-<li>使用 const 声明常量时，值不可修改，<strong>但是可以修改对象或者数组。</strong></li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> PI <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
-PI <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Assignment to constant variable</span></code></pre>
-<h3 id="1-4-let-const-var-的区别"><a href="#1-4-let-const-var-的区别" class="headerlink" title="1.4 let const var 的区别"></a>1.4 let const var 的区别</h3><ol>
-<li>使用 var 声明的变量，其作用域位该语块所在的函数内，并且存在变量的提升现象。</li>
-<li>使用 let 声明的变量，其作用域位还语句所在的代码块中，不存在变量提升。</li>
-<li>使用 const 声明的变量，在后面的出现的代码中不能修改该变量的值。</li>
+                <h1 id="Redis-高级配置"><a href="#Redis-高级配置" class="headerlink" title="Redis 高级配置"></a>Redis 高级配置</h1><h2 id="一-可能存在的问题"><a href="#一-可能存在的问题" class="headerlink" title="一 可能存在的问题"></a>一 可能存在的问题</h2><p>一般来说，要将 Redis 运用于在项目上，只是用一台 Redis 是万万不能的，原因如下：</p>
+<ol>
+<li>从结构上，单个 Redis 服务器会发生单点故障，并且一台服务器需要处理所有的请求负载，压力比较大。</li>
+<li>从容量上，单个Redis服务器内存容量有限，就算一个Redis服务器内容量为256G，也不会将所有的内存用作Redis存储内存，一般来说，单台Redis最大使用内存不应该超过20G。</li>
 </ol>
-<table>
-<thead>
-<tr>
-<th>var</th>
-<th>let</th>
-<th>const</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>函数级作用域</td>
-<td>块级作用域</td>
-<td>块级作用域</td>
-</tr>
-<tr>
-<td>变量提升</td>
-<td>不存在变量提升</td>
-<td>不存在变量提升</td>
-</tr>
-<tr>
-<td>值可变</td>
-<td>值可变</td>
-<td>值不可变</td>
-</tr>
-</tbody></table>
-<h2 id="第-2-章-解构赋值用法"><a href="#第-2-章-解构赋值用法" class="headerlink" title="第 2 章 解构赋值用法"></a>第 2 章 解构赋值用法</h2><blockquote>
-<p>ES6 中允许从数组中提取值，按照对应的位置，对变量赋值，对象也可以实现解构</p>
-</blockquote>
-<h3 id="2-1-数组解构"><a href="#2-1-数组解构" class="headerlink" title="2.1 数组解构"></a>2.1 数组解构</h3><p><strong>注意：</strong><code>解构不成功，变量的值为 undefined</code></p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> ary <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">]</span> <span class="token operator">=</span> ary
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//2</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//3</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//undefiend</span></code></pre>
-<h3 id="2-2-对象解构"><a href="#2-2-对象解构" class="headerlink" title="2.2 对象解构"></a>2.2 对象解构</h3><ul>
-<li>方式一</li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token string">"zhangsan"</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> <span class="token punctuation">{</span>name<span class="token punctuation">,</span>age<span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// `zhangsan`</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span></code></pre>
-<ul>
-<li>方式二</li>
-</ul>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token string">"zhangsan"</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span>myName<span class="token punctuation">,</span> age<span class="token punctuation">:</span>myAge<span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myName<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// `zhangsan`</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myAge<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20</span></code></pre>
-<h2 id="第-3-章-箭头函数"><a href="#第-3-章-箭头函数" class="headerlink" title="第 3 章 箭头函数"></a>第 3 章 箭头函数</h2><p>箭头函数是 ES6 新增的定义函数的方式，箭头函数是用来简化函数定义语法的。</p>
-<pre class=" language-js"><code class="language-js"><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">// 通常我们给函数起一个名字</span>
-<span class="token keyword">const</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p><strong>问题：</strong> <code>内存容量有限、处理能力有限、无法高可用</code></p>
+<h2 id="二-主从复制"><a href="#二-主从复制" class="headerlink" title="二 主从复制"></a>二 主从复制</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>应用场景</p>
 <blockquote>
-<p>若函数体内只有一句代码，且代码的执行结果是有返回值的，可以忽略大括号，若形参的个数只有一个，小括号也可以省略</p>
+<p>电子商务网站上的商品，一般是一次上传，无数次浏览的，专业名词为“多读少写”</p>
 </blockquote>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span>num2<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//传统函数</span>
-    <span class="token keyword">return</span> num1 <span class="token operator">+</span> num2<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<p><strong>主从复制</strong></p>
+<p>一个 Redis 服务可以有多个该服务的复制品，这个 Redis 服务成为 Master，其他的复制品成为 Slaves。</p>
+<p><img src="./images/redis/redis3.png" alt="redis 主从复制"></p>
+<p><strong>主从复制</strong></p>
+<ol>
+<li><strong>读写分离</strong></li>
+<li><strong>数据被复制了好多分</strong></li>
+</ol>
+<h3 id="Redis-主从复制配置"><a href="#Redis-主从复制配置" class="headerlink" title="Redis 主从复制配置"></a>Redis 主从复制配置</h3><h4 id="通用安装包redis"><a href="#通用安装包redis" class="headerlink" title="通用安装包redis"></a>通用安装包redis</h4><ol>
+<li>主数据库不需要任务配置，创建一个从数据库</li>
+</ol>
+<p>redis.conf 配置文件信息添加</p>
+<pre><code>-- port 6380
+-- slaveof 127.0.0.1 6379</code></pre><ol start="2">
+<li>启动从服务器</li>
+</ol>
+<pre><code>./bin/redis-server ./redisconf --port 6380 --saveof 127.0.0.1 6379</code></pre><h4 id="Docker-配置-Redis-主从复制"><a href="#Docker-配置-Redis-主从复制" class="headerlink" title="Docker 配置 Redis 主从复制"></a>Docker 配置 Redis 主从复制</h4><p><a href="http://note.youdao.com/noteshare?id=7eeea47aaa338fb6625ec994257d73a9" target="_blank" rel="noopener">http://note.youdao.com/noteshare?id=7eeea47aaa338fb6625ec994257d73a9</a></p>
+<h3 id="Redis-哨兵模式"><a href="#Redis-哨兵模式" class="headerlink" title="Redis 哨兵模式"></a>Redis 哨兵模式</h3><p>解决 redis master主机出现宕机的可能 。</p>
+<blockquote>
+<p>有了主从复制实现之后，我们如果想从服务器进行监控，那么在redis2.6以后提供了一个 哨兵 机制，并在 2.8 版本稳定下来。</p>
+</blockquote>
+<p><img src="./images/redis/redis%E5%93%A8%E5%85%B5.png" alt="redis 哨兵"></p>
+<p><strong>核心：心跳机制</strong> 快慢不定</p>
+<blockquote>
+<p>1.不时地监控redis 是够按照预期良好的运行</p>
+<p>2.如果出现某个redis 节点运行出现状况，能够通知另外一个进程</p>
+<p>3.能够进行自动切换，当一个master节点不可用时，能够选举出master的多个slave中的一个作为新的master，其他的slave节点追随新的master地址。</p>
+</blockquote>
+<h3 id="Redis-Cluster集群"><a href="#Redis-Cluster集群" class="headerlink" title="Redis Cluster集群"></a>Redis Cluster集群</h3><p>为了在大流量的访问下提供服务。解决高可用、高并发</p>
+<p>Redis 集群搭建有多种，但从redis3.0 之后<strong>最少使用3个master和3个slave才能建立集群</strong></p>
+<p>Redis Cluster 采用无中心结构，每一个节点保存数据和整个集群状态，每一个节点都和其他所有节点相连，</p>
+<p><img src="./images/redis/redis-cluster.png" alt="redis-cluster"></p>
+<ol>
+<li>所有的 redis 节点彼此环联，内部采用二进制协议优化传输速度和带宽</li>
+<li>节点的 fail 是通过集群中超过半数的节点检测失效才生效</li>
+<li>客户端和 redis 节点直连，不需要中间proxy层，客户端不需要连接集群的所有节点，连接集群中任意一个节点即可。</li>
+<li>redis cluster 把所有的物理节点映射到（0-16383）slot 上。</li>
+<li>Redis 集群预先分好 16384 个哈希槽，当需要在redis 集群中放置一个 key-value 时，redis先对key使用 crc16 算法算出一个结果，然后把结果对 16384 求余数，这样每个 key 都会对应一个编号在 0-16383 之间的哈希槽，redis会根据节点数量大致均等的将哈希槽映射到不同的节点中。</li>
+</ol>
+<h3 id="Redis-Cluster-容错"><a href="#Redis-Cluster-容错" class="headerlink" title="Redis Cluster 容错"></a>Redis Cluster 容错</h3><p>​    容错性，是指软件检测应用程序运行的软件或者硬件中发生的错误并从错误中恢复的能力</p>
+<h4 id="1-什么时候判断master-不可用？"><a href="#1-什么时候判断master-不可用？" class="headerlink" title="1 什么时候判断master 不可用？"></a>1 什么时候判断master 不可用？</h4><p>​    投票机制，投票过程是集群中所有的 master 参与，如果半数以上 master 节点与 master 节点通讯超时(cluster-node-timeout) 认为当前 master 节点挂掉</p>
+<h4 id="2-什么时候整个集群不可用"><a href="#2-什么时候整个集群不可用" class="headerlink" title="2 什么时候整个集群不可用"></a>2 什么时候整个集群不可用</h4><p>​    如果集群中任意 master 挂掉，且当前 master 没有 slave 集群进入 fail 状态，也可以理解成集群的 slot 映射[0-16383] 不完整时 进入 fail 状态，如果集群超过半数以上的 master 挂掉，无论是否有 slave ，集群都会进入 <code>挂掉状态</code></p>
+<h3 id="Redis-Cluster-节点分配"><a href="#Redis-Cluster-节点分配" class="headerlink" title="Redis Cluster 节点分配"></a>Redis Cluster 节点分配</h3><p>​    <code>Redis Cluster 采用虚拟的槽分区</code>，所有的键根据哈希函数映射到 0-16383 个整数的槽，每个节点负责维护一部分的槽以及槽所印映射的键值数据</p>
+<p>​    三个主节点分别是A、B、C三个节点，它们可以是一台机器上的三个端口，也可以是三台不同的服务器，那么，采用哈希槽（hash slot）的方式来分配 16384 个slot的话，他们三个节点分别承担的 slot 区间是</p>
+<blockquote>
+<p>节点 A 覆盖 0-5460</p>
+<p>节点 B 覆盖 5461-10922</p>
+<p>节点 C 覆盖 10923-16383</p>
+</blockquote>
+<h2 id="Redis-集群"><a href="#Redis-集群" class="headerlink" title="Redis 集群"></a>Redis 集群</h2><p>集群搭建参考官网：<a href="https://redis.io/topics/cluster-tutorial" target="_blank" rel="noopener">https://redis.io/topics/cluster-tutorial</a></p>
+<p>redis 集群至少需要三个 master 节点，我们这里搭建三个 master 节点，并且给每一个 master 在搭建一个 slave 节点，总共 6 个 redis 节点，这里用一台机器部署这 6 个节点。三主三从模式，Redis 5.0 以上。</p>
+<h3 id="1、创建-Redis-节点安装路径"><a href="#1、创建-Redis-节点安装路径" class="headerlink" title="1、创建 Redis 节点安装路径"></a>1、创建 Redis 节点安装路径</h3><pre><code>[root@localhost ~]# mkdir /usr/local/redis_cluster </code></pre><h3 id="2、创建-7000-7005-文件夹，分配redis-conf"><a href="#2、创建-7000-7005-文件夹，分配redis-conf" class="headerlink" title="2、创建 7000 -7005 文件夹，分配redis.conf"></a>2、创建 7000 -7005 文件夹，分配redis.conf</h3><pre><code>[root@localhost ~]# cd /usr/local/redis_cluster/
+[root@localhost redis_cluster]# mkdir 7000 7001 7002 7003 7004 7005
+[root@localhost redis_cluster]# wget http://download.redis.io/redis-stable/redis.conf
+[root@localhost redis_cluster]# ls
+7000  7001  7002  7003  7004  7005  redis.conf
+[root@localhost redis_cluster]# cp redis.conf ./7000
+[root@localhost redis_cluster]# cp redis.conf ./7001
+[root@localhost redis_cluster]# cp redis.conf ./7002
+[root@localhost redis_cluster]# cp redis.conf ./7003
+[root@localhost redis_cluster]# cp redis.conf ./7004
+[root@localhost redis_cluster]# cp redis.conf ./7005</code></pre><h3 id="3、配置每一个的-redis-conf"><a href="#3、配置每一个的-redis-conf" class="headerlink" title="3、配置每一个的 redis.conf"></a>3、配置每一个的 redis.conf</h3><pre><code># 关闭保护模式 用于公网访问
+protected-mode no
+# 端口
+port 7000
 
-<span class="token keyword">const</span> sum <span class="token operator">=</span> <span class="token punctuation">(</span>num1<span class="token punctuation">,</span>num2<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> num1 <span class="token operator">+</span> num2<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//箭头函数</span>
+# 开启集群模式
+cluster-enabled yes
+cluster-config-file nodes-7000.conf
+cluster-node-timeout 5000
 
-<span class="token keyword">const</span> fn2 <span class="token operator">=</span> v <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>箭头函数不绑定 this 关键字，箭头函数中的 this 指向 <code>函数定义位置的上下文 this</code>；</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
-    age <span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
-    say <span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 100 对象是不能产生作用域的</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-object<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h2 id="第-4-章-剩余参数"><a href="#第-4-章-剩余参数" class="headerlink" title="第 4 章 剩余参数"></a>第 4 章 剩余参数</h2><p>与 Java 的多参数 类似；</p>
-<pre class=" language-js"><code class="language-js"><span class="token function">sum</span><span class="token punctuation">(</span><span class="token string">'加法'</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> sum <span class="token operator">=</span> <span class="token punctuation">(</span>title<span class="token punctuation">,</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> total <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    args<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span>index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        total <span class="token operator">+</span><span class="token operator">=</span> item<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span></code></pre>
-<p>剩余参数，还可以和解构配合使用</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> students <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'wangwu'</span><span class="token punctuation">,</span><span class="token string">'zhangsan'</span><span class="token punctuation">,</span><span class="token string">'lisi'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> <span class="token punctuation">[</span>s1<span class="token punctuation">,</span><span class="token operator">...</span>s2<span class="token punctuation">]</span> <span class="token operator">=</span> students<span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 'wangwu'</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// ['zhangsan','lisi'] Array[2]</span></code></pre>
-<h3 id="4-1-Array-的拓展方法"><a href="#4-1-Array-的拓展方法" class="headerlink" title="4.1 Array 的拓展方法"></a>4.1 Array 的拓展方法</h3><p>拓展运算符可以将数组或者对象转为用逗号分割的参数序列。</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> ary <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
-<span class="token operator">...</span>ary <span class="token comment" spellcheck="true">//1,2,3</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>ary<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 1 2 3 这里没有逗号</span></code></pre>
+# 后台启动
+daemonize yes
+pidfile /var/run/redis_7000.pid
+logfile "7000.log"
+
+# dir /redis/data
+# bind 127.0.0.1
+
+# 连接从节点密码
+masterauth 123456
+# 设置密码
+requirepass 123456</code></pre><h3 id="4、redis-启动"><a href="#4、redis-启动" class="headerlink" title="4、redis 启动"></a>4、redis 启动</h3><pre><code>[root@localhost redis_cluster]# ./redis-5.0.8/src/redis-server ./7000/redis.conf
+[root@localhost redis_cluster]# ps -ef|grep -i redis
+[root@localhost redis_cluster]# ./redis-5.0.8/src/redis-server ./7001/redis.conf
+[root@localhost redis_cluster]# ./redis-5.0.8/src/redis-server ./7002/redis.conf
+[root@localhost redis_cluster]# ./redis-5.0.8/src/redis-server ./7003/redis.conf
+[root@localhost redis_cluster]# ./redis-5.0.8/src/redis-server ./7004/redis.conf
+[root@localhost redis_cluster]# ./redis-5.0.8/src/redis-server ./7005/redis.conf</code></pre><h3 id="5、创建-redis-集群"><a href="#5、创建-redis-集群" class="headerlink" title="5、创建 redis 集群"></a>5、创建 redis 集群</h3><blockquote>
+<p>官网告知：<br>创建集群<br>现在我们有许多实例正在运行，我们需要通过将一些有意义的配置写入节点来创建集群。<br>如果您使用的是Redis 5，这很容易完成，这是因为嵌入到中的Redis Cluster命令行实用程序为我们提供了帮助，该实用程序redis-cli可用于创建新集群，检查或重新分片现有集群等。</p>
+</blockquote>
+<p>命令：  <code>./redis-5.0.8/src/redis-cli --cluster create -a 123456 127.0.0.1:7000 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 --cluster-replicas 1</code></p>
+<pre><code>[root@localhost redis_cluster]# ./redis-5.0.8/src/redis-cli --cluster create -a 123456 127.0.0.1:7000 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 --cluster-replicas 1
+Warning: Using a password with '-a' or '-u' option on the command line interface may not be safe.
+&gt;&gt;&gt; Performing hash slots allocation on 6 nodes...
+Master[0] -&gt; Slots 0 - 5460
+Master[1] -&gt; Slots 5461 - 10922
+Master[2] -&gt; Slots 10923 - 16383
+Adding replica 127.0.0.1:7004 to 127.0.0.1:7000
+Adding replica 127.0.0.1:7005 to 127.0.0.1:7001
+Adding replica 127.0.0.1:7003 to 127.0.0.1:7002
+&gt;&gt;&gt; Trying to optimize slaves allocation for anti-affinity
+[WARNING] Some slaves are in the same host as their master
+M: d48cfd2e99a71377e42629495529fcbcfd0d9543 127.0.0.1:7000
+   slots:[0-5460] (5461 slots) master
+M: 370cf09b9d18445cb9ce10dea9466f95cc0394d3 127.0.0.1:7001
+   slots:[5461-10922] (5462 slots) master
+M: 309eb1db4b3265f8898d144b0cfccd3f5e468574 127.0.0.1:7002
+   slots:[10923-16383] (5461 slots) master
+S: 052e1e68b84e54901df10159b04fbd9afd05aedd 127.0.0.1:7003
+   replicates d48cfd2e99a71377e42629495529fcbcfd0d9543
+S: ee4dba83f69c7bcde1b0266b4d995ece7a1bc79c 127.0.0.1:7004
+   replicates 370cf09b9d18445cb9ce10dea9466f95cc0394d3
+S: 488163d590240d9ff325b8fbf94c877aef588117 127.0.0.1:7005
+   replicates 309eb1db4b3265f8898d144b0cfccd3f5e468574
+Can I set the above configuration? (type 'yes' to accept): yes
+&gt;&gt;&gt; Nodes configuration updated
+&gt;&gt;&gt; Assign a different config epoch to each node
+&gt;&gt;&gt; Sending CLUSTER MEET messages to join the cluster
+Waiting for the cluster to join
+..
+&gt;&gt;&gt; Performing Cluster Check (using node 127.0.0.1:7000)
+M: d48cfd2e99a71377e42629495529fcbcfd0d9543 127.0.0.1:7000
+   slots:[0-5460] (5461 slots) master
+   1 additional replica(s)
+M: 309eb1db4b3265f8898d144b0cfccd3f5e468574 127.0.0.1:7002
+   slots:[10923-16383] (5461 slots) master
+   1 additional replica(s)
+S: ee4dba83f69c7bcde1b0266b4d995ece7a1bc79c 127.0.0.1:7004
+   slots: (0 slots) slave
+   replicates 370cf09b9d18445cb9ce10dea9466f95cc0394d3
+S: 488163d590240d9ff325b8fbf94c877aef588117 127.0.0.1:7005
+   slots: (0 slots) slave
+   replicates 309eb1db4b3265f8898d144b0cfccd3f5e468574
+S: 052e1e68b84e54901df10159b04fbd9afd05aedd 127.0.0.1:7003
+   slots: (0 slots) slave
+   replicates d48cfd2e99a71377e42629495529fcbcfd0d9543
+M: 370cf09b9d18445cb9ce10dea9466f95cc0394d3 127.0.0.1:7001
+   slots:[5461-10922] (5462 slots) master
+   1 additional replica(s)
+[OK] All nodes agree about slots configuration.
+&gt;&gt;&gt; Check for open slots...
+&gt;&gt;&gt; Check slots coverage...
+[OK] All 16384 slots covered.
+</code></pre><h3 id="集群验证"><a href="#集群验证" class="headerlink" title="集群验证"></a>集群验证</h3><p>在某台机器上 连接任意一个redis 客户端 就可以拿到所有的数据。</p>
+<pre><code>[root@localhost redis_cluster]# ./redis-5.0.8/src/redis-cli -h 127.0.0.1 -a 123456 -c -p 7000
+Warning: Using a password with '-a' or '-u' option on the command line interface may not be safe.
+127.0.0.1:7000&gt; keys *
+(empty list or set)
+127.0.0.1:7000&gt; info replication</code></pre><pre><code>127.0.0.1:7000&gt; cluster nodes
+309eb1db4b3265f8898d144b0cfccd3f5e468574 127.0.0.1:7002@17002 master - 0 1586487109560 3 connected 10923-16383
+ee4dba83f69c7bcde1b0266b4d995ece7a1bc79c 127.0.0.1:7004@17004 slave 370cf09b9d18445cb9ce10dea9466f95cc0394d3 0 1586487109360 5 connected
+488163d590240d9ff325b8fbf94c877aef588117 127.0.0.1:7005@17005 slave 309eb1db4b3265f8898d144b0cfccd3f5e468574 0 1586487109000 6 connected
+052e1e68b84e54901df10159b04fbd9afd05aedd 127.0.0.1:7003@17003 slave d48cfd2e99a71377e42629495529fcbcfd0d9543 0 1586487108353 4 connected
+d48cfd2e99a71377e42629495529fcbcfd0d9543 127.0.0.1:7000@17000 myself,master - 0 1586487108000 1 connected 0-5460
+370cf09b9d18445cb9ce10dea9466f95cc0394d3 127.0.0.1:7001@17001 master - 0 1586487108857 2 connected 5461-10922</code></pre><p><strong>注意：</strong> </p>
 <ul>
-<li>拓展运算符 可以应用于合并数组</li>
+<li>主节点写入的时候，不会立马同步到 slave 分支，异步的去获取 key-value 值。</li>
+<li>启动一定要加入 -c </li>
 </ul>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 方式一</span>
-<span class="token keyword">let</span> ary1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
-<span class="token keyword">let</span> ary2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span>
-<span class="token operator">...</span>ary1 <span class="token comment" spellcheck="true">// 1,2,3</span>
-<span class="token operator">...</span>ary2 <span class="token comment" spellcheck="true">// 4,5,6</span>
-<span class="token keyword">let</span> ary3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>ary1<span class="token punctuation">,</span> <span class="token operator">...</span>ary2<span class="token punctuation">]</span>
-
-<span class="token comment" spellcheck="true">// 方式二</span>
-ary1<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">...</span>ary2<span class="token punctuation">)</span></code></pre>
-<ul>
-<li>拓展运算符 可以将伪数组转换为真正的数组</li>
-</ul>
-<pre><code>var oDiv = document.getElementsByTagName('div');
-console.log(oDiv);
-var ary = [...oDiv]
-ary.push('a')</code></pre><script>
+<h3 id="Redis-Cluster-总结"><a href="#Redis-Cluster-总结" class="headerlink" title="Redis Cluster 总结"></a>Redis Cluster 总结</h3><p> Redis Cluster 为了保证数据的高可用，加入了主从模式，一个主节点对应一个或者多个从节点，主节点提供数据的存取，从节点则是从主节点拉取数据进行备份，当这个主节点挂掉之后，就会有这个从节点选取一个来从当主节点，从儿保证集群不会挂掉。</p>
+<p>集群有ABC三个主节点，如果这3个节点都没有加入从节点，如果B挂掉了，我们就无法访问真个集群了，A和C的slot 也无法访问了。</p>
+<p>所以在创建集群的时候，一定要为每一个主节点都添加一个从节点，比如像这样，主节点分别为A、B、C，从节点A1、B1、C1。这样保证A挂掉之后也可以继续正常工作。</p>
+<p>A1 节点替换 A 节点，所以 Redis 集群会选择 A1 作为新的主节点，集群将会继续正确的提供服务，当B重新开启后，他会变成A1 的从节点。</p>
+<p>如果 A 和 A1 同时挂掉，那么 Redis 集群将无法工作</p>
+<h3 id="Redis-cluster-关闭集群"><a href="#Redis-cluster-关闭集群" class="headerlink" title="Redis cluster 关闭集群"></a>Redis cluster 关闭集群</h3><pre><code>/usr/local/redis_cluster/src/redis-cli -c -h 127.0.0.1 -p 7000 shutdown
+/usr/local/redis_cluster/src/redis-cli -c -h 127.0.0.1 -p 7001 shutdown</code></pre><pre><code>[root@localhost redis_cluster]# vi redis-shutdown.sh
+[root@localhost redis_cluster]# chmod u+x redis-shutdown.sh</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -695,7 +713,7 @@ ary.push('a')</code></pre><script>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lijiangit.gitee.io/2020/03/30/javascript-es6-ru-men/">http://lijiangit.gitee.io/2020/03/30/javascript-es6-ru-men/</a>
+                    <a href="http://lijiangit.gitee.io/2020/04/08/redis-xue-xi-xia/">http://lijiangit.gitee.io/2020/04/08/redis-xue-xi-xia/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -733,16 +751,12 @@ ary.push('a')</code></pre><script>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JavaScript/">
-                                    <span class="chip bg-color">JavaScript</span>
+                                <a href="/tags/redis/">
+                                    <span class="chip bg-color">redis</span>
                                 </a>
                             
-                                <a href="/tags/ES6/">
-                                    <span class="chip bg-color">ES6</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                    <span class="chip bg-color">前端</span>
+                                <a href="/tags/nosql/">
+                                    <span class="chip bg-color">nosql</span>
                                 </a>
                             
                         </div>
@@ -913,7 +927,7 @@ ary.push('a')</code></pre><script>
         repo: 'https://github.com/lijian69/lijian69.github.io.git',
         owner: 'lijian69',
         admin: "lijian69",
-        id: '2020-03-30T09-50-38',
+        id: '2020-04-08T16-17-55',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -934,9 +948,67 @@ ary.push('a')</code></pre><script>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/04/08/redis-xue-xi-xia/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Redis 高级学习篇">
+                        
+                        <span class="card-title">Redis 高级学习篇</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Redis 高级配置一 可能存在的问题一般来说，要将 Redis 运用于在项目上，只是用一台 Redis 是万万不能的，原因如下：
+
+从结构上，单个 Redis 服务器会发生单点故障，并且一台服务器需要处理所有的请求负载，压力比较大。
+从容
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/redis/">
+                        <span class="chip bg-color">redis</span>
+                    </a>
+                    
+                    <a href="/tags/nosql/">
+                        <span class="chip bg-color">nosql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/04/08/redis-xue-xi-shang/">
                     <div class="card-image">
@@ -954,9 +1026,9 @@ ary.push('a')</code></pre><script>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -980,47 +1052,6 @@ ary.push('a')</code></pre><script>
                         <span class="chip bg-color">nosql</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/17/lombda-yi-pian-jiu-gou-liao/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Lombda一篇就够了">
-                        
-                        <span class="card-title">Lombda一篇就够了</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            collect 流转换
-将流转换为list。还有toSet()，toMap()等。及早求值。
-
- List&lt;Student> studentList = Stream.of(new Student("路飞", 22, 175),
-  
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Lijian
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
