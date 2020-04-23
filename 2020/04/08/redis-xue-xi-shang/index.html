@@ -463,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-08
+                    2020-04-10
                 </div>
                 
 
@@ -550,7 +550,7 @@ watch key [keys ...]
 <li>命令序列化，入队</li>
 <li>执行事务 exec</li>
 </ul>
-<p><img src="./images/redis/redis-trans.jpg" alt="redis 事务"></p>
+<p><img src="https://s1.ax1x.com/2020/04/10/GoFAv8.png" alt="redis 事务"></p>
 <h3 id="实例1-multi-exec"><a href="#实例1-multi-exec" class="headerlink" title="实例1 multi exec"></a>实例1 multi exec</h3><p>转账功能，A 向 B 转账 50 块钱</p>
 <pre class=" language-shell"><code class="language-shell"># 开启事务
 127.0.0.1:6379> multi 
@@ -652,7 +652,7 @@ key: 存放100 手机编号
 </ul>
 <p><strong>产生的问题</strong></p>
 <p>aof 文件会越来越大，产生很多冗余无用的记录</p>
-<h3 id="Redis-恢复机制"><a href="#Redis-恢复机制" class="headerlink" title="Redis 恢复机制"></a>Redis 恢复机制</h3><p><img src="./images/redis/redis-aof-rdb.jpg" alt="redis 恢复机制"></p>
+<h3 id="Redis-恢复机制"><a href="#Redis-恢复机制" class="headerlink" title="Redis 恢复机制"></a>Redis 恢复机制</h3><p><img src="https://s1.ax1x.com/2020/04/10/GoFK5n.png" alt="redis 恢复机制"></p>
 <h2 id="Redis-缓存和数据一致性"><a href="#Redis-缓存和数据一致性" class="headerlink" title="Redis 缓存和数据一致性"></a>Redis 缓存和数据一致性</h2><h3 id="1、实时同步"><a href="#1、实时同步" class="headerlink" title="1、实时同步"></a>1、实时同步</h3><p>对强一致性要求比较高，采用实时同步方案，即查询缓存，查询不到再从DB查询，保存到缓存；更新缓存时，先更新数据库，再将缓存的设置过期</p>
 <p>@Cacheable ： 查询时使用 注意 Long 类型需要转换为String类型，否则抛异常。‘</p>
 <p>@CachePut ：更新时候使用，使用此注解，一定会从DB 查询数据</p>
@@ -667,11 +667,12 @@ key: 存放100 手机编号
 <p>​    注册完成 –&gt; </p>
 <p>​      1.  邮箱发送注册成功</p>
 <pre><code>                            2. 手机号发送验证码
+
                                3. 将注册信息插入到数据库中</code></pre></blockquote>
 <p>异步队列：解耦、异步、削峰</p>
-<h3 id="3、使用阿里的同步工具-canal"><a href="#3、使用阿里的同步工具-canal" class="headerlink" title="3、使用阿里的同步工具 canal"></a>3、使用阿里的同步工具 canal</h3><p><img src="./images/redis/canal.png" alt="canal"></p>
+<h3 id="3、使用阿里的同步工具-canal"><a href="#3、使用阿里的同步工具-canal" class="headerlink" title="3、使用阿里的同步工具 canal"></a>3、使用阿里的同步工具 canal</h3><p><img src="https://s1.ax1x.com/2020/04/10/GoF3vT.png" alt="canal"></p>
 <p><strong>Canal 工作原理</strong></p>
-<p><img src="./images/redis/canal2.png" alt="canal 工作原理"></p>
+<p><img src="https://s1.ax1x.com/2020/04/10/GoF08x.png" alt="canal 工作原理"></p>
 <h3 id="4、采用-UDF-自定义函数编写"><a href="#4、采用-UDF-自定义函数编写" class="headerlink" title="4、采用 UDF 自定义函数编写"></a>4、采用 UDF 自定义函数编写</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="穿透"><a href="#穿透" class="headerlink" title="穿透"></a>穿透</h3><p><strong>缓存穿透是指查询一个一定不存在的数据，由于缓存是不命中需要从数据库查询，查询不到数据则不写入缓存，这将导致这个不存在的数据每次请求都要到数据库中去查询，造成了缓存穿透</strong></p>
 <p><strong>解决方法</strong> 持久层查询不到就缓存空结果，查询时先判断缓存中是否 exists key ，如果有直接返回空，没有则查询后返回。</p>
 <p><code>注意：insert 时需要清除查询的key</code></p>
@@ -704,7 +705,7 @@ localhost:8080/user?id=asdf;sladkfs 后台就会解密失败
 <li>在value设置一个比过期时间t0小的过期时间值t1，当t1过期的时候，延长t1并做更新缓存操作。</li>
 <li>设置标签缓存，标签缓存设置过期时间，标签缓存过期后，需要异步的更新实际缓存</li>
 </ol>
-<p><img src="./images/redis/lock.png" alt="双重锁实现数据查询"></p>
+<p><img src="https://s1.ax1x.com/2020/04/10/GoF6qe.png" alt="双重锁实现数据查询"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1238,7 +1239,7 @@ if(true){
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.8k</span>&nbsp;字
+                class="white-color">25.3k</span>&nbsp;字
             
             
             

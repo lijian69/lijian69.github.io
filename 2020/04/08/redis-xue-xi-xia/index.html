@@ -505,7 +505,7 @@
 </blockquote>
 <p><strong>主从复制</strong></p>
 <p>一个 Redis 服务可以有多个该服务的复制品，这个 Redis 服务成为 Master，其他的复制品成为 Slaves。</p>
-<p><img src="./images/redis/redis3.png" alt="redis 主从复制"></p>
+<p><img src="https://s1.ax1x.com/2020/04/10/GoFRIA.png" alt="redis 主从复制"></p>
 <p><strong>主从复制</strong></p>
 <ol>
 <li><strong>读写分离</strong></li>
@@ -524,7 +524,7 @@
 <blockquote>
 <p>有了主从复制实现之后，我们如果想从服务器进行监控，那么在redis2.6以后提供了一个 哨兵 机制，并在 2.8 版本稳定下来。</p>
 </blockquote>
-<p><img src="./images/redis/redis%E5%93%A8%E5%85%B5.png" alt="redis 哨兵"></p>
+<p><img src="https://s1.ax1x.com/2020/04/10/GokuLD.png" alt="redis 哨兵"></p>
 <p><strong>核心：心跳机制</strong> 快慢不定</p>
 <blockquote>
 <p>1.不时地监控redis 是够按照预期良好的运行</p>
@@ -534,7 +534,7 @@
 <h3 id="Redis-Cluster集群"><a href="#Redis-Cluster集群" class="headerlink" title="Redis Cluster集群"></a>Redis Cluster集群</h3><p>为了在大流量的访问下提供服务。解决高可用、高并发</p>
 <p>Redis 集群搭建有多种，但从redis3.0 之后<strong>最少使用3个master和3个slave才能建立集群</strong></p>
 <p>Redis Cluster 采用无中心结构，每一个节点保存数据和整个集群状态，每一个节点都和其他所有节点相连，</p>
-<p><img src="./images/redis/redis-cluster.png" alt="redis-cluster"></p>
+<p><img src="https://s1.ax1x.com/2020/04/10/GoF5xf.png" alt="redis-cluster"></p>
 <ol>
 <li>所有的 redis 节点彼此环联，内部采用二进制协议优化传输速度和带宽</li>
 <li>节点的 fail 是通过集群中超过半数的节点检测失效才生效</li>
@@ -948,55 +948,60 @@ d48cfd2e99a71377e42629495529fcbcfd0d9543 127.0.0.1:7000@17000 myself,master - 0 
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/08/redis-xue-xi-xia/">
+                <a href="/2020/04/22/firstpage/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Redis 高级学习篇">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="入门到精通系列">
                         
-                        <span class="card-title">Redis 高级学习篇</span>
+                        <span class="card-title">入门到精通系列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Redis 高级配置一 可能存在的问题一般来说，要将 Redis 运用于在项目上，只是用一台 Redis 是万万不能的，原因如下：
+                            最近喜欢上一句话：”只要学不死，就往死里学！“，随着现在互联网行业热度提升，是的新增很多 java 从业人员，这样就导致越来越多的公司在选拔人才的时候，不仅仅局限于java
 
-从结构上，单个 Redis 服务器会发生单点故障，并且一台服务器需要处理所有的请求负载，压力比较大。
-从容
+        document.querySelectorAl
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
+                            <a href="/categories/%E6%9E%B6%E6%9E%84/" class="post-category">
+                                    架构
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/redis/">
-                        <span class="chip bg-color">redis</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/nosql/">
-                        <span class="chip bg-color">nosql</span>
+                    <a href="/tags/Mysql/">
+                        <span class="chip bg-color">Mysql</span>
+                    </a>
+                    
+                    <a href="/tags/Redis/">
+                        <span class="chip bg-color">Redis</span>
+                    </a>
+                    
+                    <a href="/tags/RabbitMQ/">
+                        <span class="chip bg-color">RabbitMQ</span>
                     </a>
                     
                 </div>
@@ -1197,7 +1202,7 @@ d48cfd2e99a71377e42629495529fcbcfd0d9543 127.0.0.1:7000@17000 myself,master - 0 
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.8k</span>&nbsp;字
+                class="white-color">25.3k</span>&nbsp;字
             
             
             

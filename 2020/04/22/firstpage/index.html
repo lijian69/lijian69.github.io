@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java必备知识总结, 一只帅帅的猿儿">
+    <meta name="keywords" content="入门到精通系列, 一只帅帅的猿儿">
     <meta name="description" content="其实这个世界上大部分传奇，不过是普普通通的人们将心意化成了行动，坚持至极致而已!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java必备知识总结 | 一只帅帅的猿儿</title>
+    <title>入门到精通系列 | 一只帅帅的猿儿</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java必备知识总结</h1>
+                    <h1 class="description center-align post-title">入门到精通系列</h1>
                 </div>
             </div>
         </div>
@@ -427,16 +427,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                                <span class="chip bg-color">基础知识</span>
+                            <a href="/tags/Mysql/">
+                                <span class="chip bg-color">Mysql</span>
                             </a>
                         
-                            <a href="/tags/%E5%BF%85%E5%A4%87/">
-                                <span class="chip bg-color">必备</span>
+                            <a href="/tags/Redis/">
+                                <span class="chip bg-color">Redis</span>
+                            </a>
+                        
+                            <a href="/tags/RabbitMQ/">
+                                <span class="chip bg-color">RabbitMQ</span>
                             </a>
                         
                     </div>
@@ -447,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%90%8E%E5%8F%B0%E5%BC%80%E5%8F%91/" class="post-category">
-                                后台开发
+                            <a href="/categories/%E6%9E%B6%E6%9E%84/" class="post-category">
+                                架构
                             </a>
                         
                     </div>
@@ -460,28 +464,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-06
+                    2020-04-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-16
+                    2020-04-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    121
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    1 分
                 </div>
                 
 
@@ -497,236 +501,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<ul>
-<li>整理知识，学习笔记</li>
-<li>发布日记，杂文，所见所想</li>
-<li>撰写发布技术文稿（代码支持）</li>
-<li>撰写发布学术论文（LaTeX 公式支持）</li>
-</ul>
-</blockquote>
-<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p><code>反射 (Reflection)</code> 是 Java 的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可以操作类或对象的内部属性。   </p>
-<blockquote>
-<p>简而言之，通过反射，我们可以在运行时获得程序或程序集中每一个类型的成员和成员的信息。程序中一般的对象的类型都是在编译期就确定下来的，而 Java 反射机制可以动态地创建对象并调用其属性，这样的对象的类型在编译期是未知的。所以我们可以通过反射机制直接创建对象，即使这个对象的类型在编译期是未知的。   </p>
-</blockquote>
-<p>反射的核心是 <code>JVM</code> 在运行时才动态加载类或调用方法/访问属性，它不需要事先（写代码的时候或编译期）知道运行对象是谁。   </p>
-<ul>
-<li>Java 反射主要提供以下功能： 重点：<strong>是运行时而不是编译时</strong>  </li>
-</ul>
-<p>1.在运行时判断任意一个对象所属的类；<br>2.在运行时构造任意一个类的对象；<br>3.在运行时判断任意一个类所具有的成员变量和方法（通过反射甚至可以调用private方法）；<br>4.在运行时调用任意一个对象的方法</p>
-<h3 id="反射的基本运用"><a href="#反射的基本运用" class="headerlink" title="反射的基本运用"></a>反射的基本运用</h3><h4 id="1、获得-Class-对象"><a href="#1、获得-Class-对象" class="headerlink" title="1、获得 Class 对象"></a>1、获得 Class 对象</h4><ul>
-<li>调用运行时类本身的 .class 属性</li>
-</ul>
-<pre><code>Class clazz1 = Person.class;
-System.out.println(clazz1.getName());</code></pre><ul>
-<li>通过运行时类的对象获取 getClass();</li>
-</ul>
-<pre><code>Person p = new Person();
-Class clazz3 = p.getClass();
-System.out.println(clazz3.getName());</code></pre><ul>
-<li>使用 Class 类的 forName 静态方法</li>
-</ul>
-<pre><code>try {
-    Class&lt;?&gt; aClass = Class.forName("com.lijian.Thread.Foo");
-    System.out.println(aClass.getName());
-} catch (ClassNotFoundException e) {
-    System.out.println("该类没有找到");
-}</code></pre><ul>
-<li>（了解）通过类的加载器 ClassLoader</li>
-</ul>
-<pre><code>ClassLoader classLoader = this.getClass().getClassLoader();
-    try {
-        Class&lt;?&gt; aClass = classLoader.loadClass("com.lijian.Thread.Foo");
-        System.out.println(aClass.getName());
-    } catch (ClassNotFoundException e) {
-        System.out.println("该类没有找到");
-}</code></pre><h4 id="2、判断是否为某个类的实例"><a href="#2、判断是否为某个类的实例" class="headerlink" title="2、判断是否为某个类的实例"></a>2、判断是否为某个类的实例</h4><p>一般地，我们用 instanceof 关键字来判断是否为某个类的实例。同时我们也可以借助反射中 Class 对象的 isInstance() 方法来判断是否为某个类的实例，它是一个 native 方法：</p>
-<pre><code>public native boolean isInstance(Object obj);</code></pre><h4 id="3、创建实例"><a href="#3、创建实例" class="headerlink" title="3、创建实例"></a>3、创建实例</h4><p>通过反射来生成对象主要有两种方式。</p>
-<ul>
-<li>使用Class对象的newInstance()方法来创建Class对象对应类的实例。</li>
-</ul>
-<pre><code>Class&lt;?&gt; c = String.class;
-Object str = c.newInstance();</code></pre><ul>
-<li>先通过Class对象获取指定的Constructor对象，再调用Constructor对象的newInstance()方法来创建实例。这种方法可以用指定的构造器构造类的实例。</li>
-</ul>
-<pre><code>//获取String所对应的Class对象
-Class&lt;?&gt; c = String.class;
-//获取String类带一个String参数的构造器
-Constructor constructor = c.getConstructor(String.class);
-//根据构造器创建实例
-Object obj = constructor.newInstance("23333");
-System.out.println(obj);</code></pre><h4 id="4、获取方法、属性名"><a href="#4、获取方法、属性名" class="headerlink" title="4、获取方法、属性名"></a>4、获取方法、属性名</h4><ul>
-<li>获取某个Class对象的方法集合，主要有以下几个方法：<br>getDeclaredMethods 方法返回类或接口声明的所有方法，包括公共、保护、默认（包）访问和私有方法，但不包括继承的方法。</li>
-</ul>
-<pre><code>public Method[] getDeclaredMethods() throws SecurityException
-public Field[] getDeclaredFields() throws SecurityException</code></pre><ul>
-<li>getMethods 方法返回某个类的所有公用（public）方法，包括其继承类的公用方法。</li>
-</ul>
-<pre><code>public Method[] getMethods() throws SecurityException
-public Field[] getFields() throws SecurityException</code></pre><ul>
-<li>getMethod 方法返回一个特定的方法，其中第一个参数为方法名称，后面的参数为方法的参数对应Class的对象。</li>
-</ul>
-<pre><code>public Method getMethod(String name, Class&lt;?&gt;... parameterTypes)
-public Field getField(String name)</code></pre><blockquote>
-<p><strong>获取方法的汇总代码</strong></p>
-</blockquote>
-<pre><code>public class Reflex {
-
-
-    public static void main(String[] args) {
-        Class&lt;MethodClass&gt; methodClassClass = MethodClass.class;
-
-        try {
-            // 区别重载 获取方法
-            Method add = methodClassClass.getMethod("add", int.class, int.class);
-            System.out.println(add.getName());
-
-            //getMethods()方法获取的所有方法 不包括继承
-            Method[] declaredMethods = methodClassClass.getDeclaredMethods();
-            for (Method declaredMethod : declaredMethods) {
-                System.out.println(declaredMethod.getName());
-            }
-            System.out.println("getMethods获取的方法：");
-
-            //getMethods()方法获取的所有方法 包括继承
-            Method[] methods = methodClassClass.getMethods();
-            for (Method method : methods) {
-                System.out.println(method.getName());
-            }
-
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        }
-    }
-
-}
-
-public class MethodClass {
-        public final int fuck = 3;
-        public int add(int a,int b) {
-            return a+b;
-        }
-        public int sub(int a,int b) {
-            return a+b;
-        }
-}
-</code></pre><h4 id="5、获取构造器信息"><a href="#5、获取构造器信息" class="headerlink" title="5、获取构造器信息"></a>5、获取构造器信息</h4><p>获取类构造器的用法与上述获取方法的用法类似。主要是通过Class类的getConstructor方法得到Constructor类的一个实例，而Constructor类有一个newInstance方法可以创建一个对象实例:</p>
-<pre><code>public T newInstance(Object ... initargs)</code></pre><p>此方法可以根据传入的参数来调用对应的Constructor创建对象实例。</p>
-<h4 id="6、获取类的成员变量（字段）信息"><a href="#6、获取类的成员变量（字段）信息" class="headerlink" title="6、获取类的成员变量（字段）信息"></a>6、获取类的成员变量（字段）信息</h4><p>主要是这几个方法，在此不再赘述：</p>
-<pre><code>getFiled：访问公有的成员变量
-getDeclaredField：所有已声明的成员变量，但不能得到其父类的成员变量
-getFileds 和 getDeclaredFields 方法用法同上（参照 Method）。</code></pre><h4 id="7、调用方法"><a href="#7、调用方法" class="headerlink" title="7、调用方法"></a>7、调用方法</h4><p>当我们从类中获取了一个方法后，我们就可以用 invoke() 方法来调用这个方法。invoke 方法的原型为:</p>
-<pre><code>public Object invoke(Object obj, Object... args)
-        throws IllegalAccessException, IllegalArgumentException,
-           InvocationTargetException</code></pre><blockquote>
-<p><strong>调用方法的汇总代码</strong></p>
-</blockquote>
-<pre><code>public static void main(String[] args) throws IllegalAccessException, InstantiationException {
-        Class&lt;?&gt; methodClassClass = MethodClass.class;
-        //创建methodClass的实例
-        Object obj = methodClassClass.newInstance();
-        try {
-            // 区别重载 获取方法
-            Method add = methodClassClass.getMethod("add", int.class, int.class);
-            //调用method对应的方法 =&gt; add(1,4)
-            Object result = add.invoke(obj, 1, 2);
-            System.out.println(result);
-        } catch (NoSuchMethodException | InvocationTargetException e) {
-            e.printStackTrace();
-        }
-    }</code></pre><pre><code>public class Reflex {
-
-
-    public static void main(String[] args) throws IllegalAccessException, InstantiationException {
-        Class&lt;?&gt; methodClassClass = MethodClass.class;
-        Object o = methodClassClass.newInstance();
-        try {
-            Field field = methodClassClass.getDeclaredField("fuck");
-            Method method = o.getClass().getMethod("get" + getMethodName(field.getName()));
-            Object invoke = method.invoke(o);
-            System.out.println(field.getName() + "=" + (int) invoke);
-        } catch (Exception  e) {
-            e.printStackTrace();
-        }
-    }
-    private static String getMethodName(String fildeName) throws Exception{
-                 byte[] items = fildeName.getBytes();
-                 items[0] = (byte) ((char) items[0] - 'a' + 'A');
-                 return new String(items);
-    }
-}</code></pre><h2 id="常见的五种单例模式"><a href="#常见的五种单例模式" class="headerlink" title="常见的五种单例模式"></a>常见的五种单例模式</h2><h3 id="1、饿汉式-线程安全，调用效率高，但是不能延时加载"><a href="#1、饿汉式-线程安全，调用效率高，但是不能延时加载" class="headerlink" title="1、饿汉式 (线程安全，调用效率高，但是不能延时加载)"></a>1、饿汉式 (线程安全，调用效率高，但是不能延时加载)</h3><pre><code>public class Singleton1 {
-   /*
-    * 饿汉式是在声明的时候就已经初始化Singleton1,确保了对象的唯一性
-    *
-    * 声明的时候就初始化对象会浪费不必要的资源
-    **/
-    private static Singleton1 instance = new Singleton1();
-
-    private Singleton1() {
-    }
-
-    // 通过静态方法或枚举返回单例对象
-    public Singleton1 getInstance() {
-        return instance;
-    }
-}</code></pre><blockquote>
-<p>一上来就把单例对象给创建出来了，要用的时候直接返回即可，这种可以说是单例模式最简单的一种实现方式，但是问题也比较明显，单例在还没有使用的时候，初始化已经完成了，也就是说，如果程序从有到尾都没有使用这个单例的话，单例的对象还是会创建，这就造成了不必要资源浪费，多以不推荐使用这种方式。</p>
-</blockquote>
-<h3 id="2、懒汉式（线程安全，调用效率不高，但是能延迟加载）"><a href="#2、懒汉式（线程安全，调用效率不高，但是能延迟加载）" class="headerlink" title="2、懒汉式（线程安全，调用效率不高，但是能延迟加载）"></a>2、懒汉式（线程安全，调用效率不高，但是能延迟加载）</h3><pre><code>public class SingletonDemo2 {
-
-    //类初始化时，不初始化这个对象(延时加载，真正用的时候再创建)
-    private static SingletonDemo2 instance;
-
-    //构造器私有化
-    private SingletonDemo2(){}
-
-    //方法同步，调用效率低
-    public static synchronized SingletonDemo2 getInstance(){
-        if(instance==null){
-            instance=new SingletonDemo2();
-        }
-        return instance;
-    }
-}</code></pre><h3 id="3、Double-CheckLock-双重锁判断机制-DCL-也就是（由于JVM底层模型原因，偶尔会出问题，不建议使用）"><a href="#3、Double-CheckLock-双重锁判断机制-DCL-也就是（由于JVM底层模型原因，偶尔会出问题，不建议使用）" class="headerlink" title="3、Double CheckLock 双重锁判断机制 DCL 也就是（由于JVM底层模型原因，偶尔会出问题，不建议使用）"></a>3、Double CheckLock 双重锁判断机制 DCL 也就是（由于JVM底层模型原因，偶尔会出问题，不建议使用）</h3><pre><code>public class Singleton3 {
-    private static Singleton3 instance;
-
-    private Singleton3() {}
-
-    /**
-     * 两次判空，第一次判空是为了不必要的同步，第二次判空为了在instance 为 null 的情况下创建实例
-     * 既保证了线程安全且单例对象初始化后调用getInstance又不会进行同步锁判断
-     * 
-     * 优点:资源利用率高,效率高
-     * 缺点:第一次加载稍慢，由于java处理器允许乱序执行，偶尔会失败
-     *
-     * @return
-     */
-    public static Singleton3 getInstance() {
-        if (instance == null) {
-            synchronized (Singleton3.class) {
-                if (instance == null) {
-                    instance = new Singleton3();
-                }
-            }
-        }
-        return instance;
-    }
-}</code></pre><h3 id="4、★-静态内部类实现模式-线程安全，调用效率高，可以延迟加载"><a href="#4、★-静态内部类实现模式-线程安全，调用效率高，可以延迟加载" class="headerlink" title="4、★ 静态内部类实现模式 (线程安全，调用效率高，可以延迟加载)"></a>4、★ 静态内部类实现模式 (线程安全，调用效率高，可以延迟加载)</h3><pre><code>public class Singleton4 {
-   /*
-    * 当第一次加载Singleton类时并不会初始化SINGLRTON，只有第一次调用getInstance方法的时候才会初始化 SINGLETON
-    * 第一次调用getInstance 方法的时候虚拟机才会加载SingletonHoder类，这种方式不仅能够保证线程安全，也能够保证对象的唯一
-    * 还延迟了单例的实例化，所有推荐使用这种方式
-    **/
-    private Singleton4() {}
-
-    public Singleton4 getInstance() {
-        return SingletonHolder.SINGLETON;
-    }
-
-    private static class SingletonHolder {
-        private static final Singleton4 SINGLETON = new Singleton4();
-    }
-}</code></pre><h3 id="5、枚举类（线程安全，调用效率高，不能延时加载，可以天然的防止反射和反序列化调用）"><a href="#5、枚举类（线程安全，调用效率高，不能延时加载，可以天然的防止反射和反序列化调用）" class="headerlink" title="5、枚举类（线程安全，调用效率高，不能延时加载，可以天然的防止反射和反序列化调用）"></a>5、枚举类（线程安全，调用效率高，不能延时加载，可以天然的防止反射和反序列化调用）</h3><script>
+                <p>最近喜欢上一句话：”只要学不死，就往死里学！“，随着现在互联网行业热度提升，是的新增很多 java 从业人员，这样就导致越来越多的公司在选拔人才的时候，不仅仅局限于java</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -769,7 +545,7 @@ getFileds 和 getDeclaredFields 方法用法同上（参照 Method）。</code><
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lijiangit.gitee.io/2020/03/06/java-bi-bei-zhi-shi-zong-jie/">http://lijiangit.gitee.io/2020/03/06/java-bi-bei-zhi-shi-zong-jie/</a>
+                    <a href="http://lijiangit.gitee.io/2020/04/22/firstpage/">http://lijiangit.gitee.io/2020/04/22/firstpage/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -807,16 +583,20 @@ getFileds 和 getDeclaredFields 方法用法同上（参照 Method）。</code><
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                                    <span class="chip bg-color">基础知识</span>
+                                <a href="/tags/Mysql/">
+                                    <span class="chip bg-color">Mysql</span>
                                 </a>
                             
-                                <a href="/tags/%E5%BF%85%E5%A4%87/">
-                                    <span class="chip bg-color">必备</span>
+                                <a href="/tags/Redis/">
+                                    <span class="chip bg-color">Redis</span>
+                                </a>
+                            
+                                <a href="/tags/RabbitMQ/">
+                                    <span class="chip bg-color">RabbitMQ</span>
                                 </a>
                             
                         </div>
@@ -987,7 +767,7 @@ getFileds 和 getDeclaredFields 方法用法同上（参照 Method）。</code><
         repo: 'https://github.com/lijian69/lijian69.github.io.git',
         owner: 'lijian69',
         admin: "lijian69",
-        id: '2020-03-06T09-33-54',
+        id: '2020-04-22T10-50-02',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1012,89 +792,29 @@ getFileds 和 getDeclaredFields 方法用法同上（参照 Method）。</code><
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/06/pai-xu-suan-fa/">
+                <a href="/2020/04/22/hashmap-yi-pian-jiu-gou-liao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="基于 Java 的排序算法">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="HashMap 一篇就够了">
                         
-                        <span class="card-title">基于 Java 的排序算法</span>
+                        <span class="card-title">HashMap 一篇就够了</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            排序算法，即通过特定的算法因式将一组或多组数据按照既定模式进行重新排序。这种新序列遵循着一定的规则，体现出一定的规律，因此，经处理后的数据便于筛选和计算，大大提高了计算效率。对于排序，我们首先要求其具有一定的稳定性，
+                            为什么要学习 HashMap ？这你就不用问我了。如果你不知道为什么？那证明你不是一个真正的 Java 开发工程师。假的？学透请随我来~。
+一篇文章学会 HashMap？
 
 
-本节主要是对八大排
+作者介绍：本人Java特工，代号：Cris Li ； 中文名：克
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-22
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
-                    </a>
-                    
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/06/java-bi-bei-zhi-shi-zong-jie/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Java必备知识总结">
-                        
-                        <span class="card-title">Java必备知识总结</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-
-整理知识，学习笔记
-发布日记，杂文，所见所想
-撰写发布技术文稿（代码支持）
-撰写发布学术论文（LaTeX 公式支持）
-
-
-反射反射 (Reflection) 是 Java 的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1107,7 +827,6 @@ getFileds 和 getDeclaredFields 方法用法同上（参照 Method）。</code><
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1115,12 +834,68 @@ getFileds 和 getDeclaredFields 方法用法同上（参照 Method）。</code><
                         <span class="chip bg-color">java</span>
                     </a>
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-                        <span class="chip bg-color">基础知识</span>
+                    <a href="/tags/HashMap/">
+                        <span class="chip bg-color">HashMap</span>
                     </a>
                     
-                    <a href="/tags/%E5%BF%85%E5%A4%87/">
-                        <span class="chip bg-color">必备</span>
+                    <a href="/tags/%E9%9B%86%E5%90%88/">
+                        <span class="chip bg-color">集合</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/04/08/redis-xue-xi-xia/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Redis 高级学习篇">
+                        
+                        <span class="card-title">Redis 高级学习篇</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Redis 高级配置一 可能存在的问题一般来说，要将 Redis 运用于在项目上，只是用一台 Redis 是万万不能的，原因如下：
+
+从结构上，单个 Redis 服务器会发生单点故障，并且一台服务器需要处理所有的请求负载，压力比较大。
+从容
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/redis/">
+                        <span class="chip bg-color">redis</span>
+                    </a>
+                    
+                    <a href="/tags/nosql/">
+                        <span class="chip bg-color">nosql</span>
                     </a>
                     
                 </div>
