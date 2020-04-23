@@ -498,13 +498,13 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>为什么要学习 HashMap ？这你就不用问我了。如果你不知道为什么？那证明你不是一个真正的 Java 开发工程师。假的？学透请随我来~。</p>
-<h3 id="一篇文章学会-HashMap？"><a href="#一篇文章学会-HashMap？" class="headerlink" title="一篇文章学会 HashMap？"></a>一篇文章学会 HashMap？</h3><p><img src="https://upload-images.jianshu.io/upload_images/5644137-493dcd2fd575e8b2.jpg?imageMogr2/auto-orient/strip" alt="欢迎阅览"></p>
+<h3 id="一篇文章学会-HashMap？"><a href="#一篇文章学会-HashMap？" class="headerlink" title="一篇文章学会 HashMap？"></a>一篇文章学会 HashMap？</h3><p><img src="https://pic.downk.cc/item/5ea0f4aec2a9a83be57836d3.gif" alt="欢迎阅览"></p>
 <hr>
 <blockquote>
 <p>作者介绍：<br>本人Java特工，代号：Cris Li ； 中文名：克瑞斯理<br>简书地址: <a href="https://www.jianshu.com/u/c508b0afaaee" target="_blank" rel="noopener">https://www.jianshu.com/u/c508b0afaaee</a><br>CSDN地址: <a href="https://blog.csdn.net/jianli95" target="_blank" rel="noopener">https://blog.csdn.net/jianli95</a><br>个人纯洁版博客: <a href="https://lijiangit.gitee.io/">https://lijiangit.gitee.io/</a></p>
 </blockquote>
 <hr>
-<h2 id="Q1：你用过-HashMap-吗？，你能跟我说说它的数据结构吗？"><a href="#Q1：你用过-HashMap-吗？，你能跟我说说它的数据结构吗？" class="headerlink" title="Q1：你用过 HashMap 吗？，你能跟我说说它的数据结构吗？"></a>Q1：你用过 HashMap 吗？，你能跟我说说它的数据结构吗？</h2><p><strong>回答：</strong> HashMap 是一种容器类型，通过 Key-Value 键值对存储数据，JDK1.8 之前采用 <code>数组+链表</code> 的数据结构，但是在 JDK1.8 以及 1.8 之后采用的<code>数组+链表+红黑树</code>的数据结构底部存储数据，当链表的长度（阈值）达到 <strong>8</strong> 的时候，它的链表会转换为红黑树，当红黑树的长度减小到 <strong>6</strong> 的时候，红黑树转换为链表，为什么是 <strong>8</strong> 呢？，因为西方的采用<strong>泊松分布</strong>减少Hash的碰撞次数。<br><img src="https://upload-images.jianshu.io/upload_images/5644137-353e3d3f46f37f1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HashMap的底部数据结构"></p>
+<h2 id="Q1：你用过-HashMap-吗？，你能跟我说说它的数据结构吗？"><a href="#Q1：你用过-HashMap-吗？，你能跟我说说它的数据结构吗？" class="headerlink" title="Q1：你用过 HashMap 吗？，你能跟我说说它的数据结构吗？"></a>Q1：你用过 HashMap 吗？，你能跟我说说它的数据结构吗？</h2><p><strong>回答：</strong> HashMap 是一种容器类型，通过 Key-Value 键值对存储数据，JDK1.8 之前采用 <code>数组+链表</code> 的数据结构，但是在 JDK1.8 以及 1.8 之后采用的<code>数组+链表+红黑树</code>的数据结构底部存储数据，当链表的长度（阈值）达到 <strong>8</strong> 的时候，它的链表会转换为红黑树，当红黑树的长度减小到 <strong>6</strong> 的时候，红黑树转换为链表，为什么是 <strong>8</strong> 呢？，因为西方的采用<strong>泊松分布</strong>减少Hash的碰撞次数。<br><img src="https://pic.downk.cc/item/5ea0f419c2a9a83be577c94d.png" alt="HashMap的底部数据结构"></p>
 <h2 id="Q2：HashMap中-hash-函数怎么是是实现的"><a href="#Q2：HashMap中-hash-函数怎么是是实现的" class="headerlink" title="Q2：HashMap中 hash 函数怎么是是实现的?"></a>Q2：HashMap中 hash 函数怎么是是实现的?</h2><p><strong>回答：</strong> <code>异或 + 与 运算</code> 。“模”运算的消耗还是比较大的，能不能找一种更快速，消耗更小的方式，我们来看看JDK1.8采用<strong>位异或</strong>方式代替取模运算。(h ^ (h &gt;&gt;&gt; 16)) hash函数的位干扰。减少hash碰撞。</p>
 <pre><code>static final int hash(Object key) {
     if (key == null){
@@ -517,7 +517,7 @@
       // &gt;&gt;&gt;:无符号右移，忽略符号位，空位都以0补齐
       //其中n是数组的长度，即Map的数组部分初始化长度
      return  (n-1)&amp;(h ^ (h &gt;&gt;&gt; 16));
-}</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/5644137-3d35043ddf845c0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><strong>简单来说就是</strong><br>          1.高16bt位不变，低16bit位和高16bit位做了一个异或(得到的HASHCODE转化为32位的二进制，前16位和后16位低16bit和高16bit做了一个异或【相同得0，不同得1】)<br>          2.(n-1)&amp;hash == 最终hash</p>
+}</code></pre><p><img src="https://pic.downk.cc/item/5ea0f45ac2a9a83be577f8ba.png" alt="image.png"><br><strong>简单来说就是</strong><br>          1.高16bt位不变，低16bit位和高16bit位做了一个异或(得到的HASHCODE转化为32位的二进制，前16位和后16位低16bit和高16bit做了一个异或【相同得0，不同得1】)<br>          2.(n-1)&amp;hash == 最终hash</p>
 <h2 id="Q2：谈一下HashMap的特性？"><a href="#Q2：谈一下HashMap的特性？" class="headerlink" title="Q2：谈一下HashMap的特性？"></a>Q2：谈一下HashMap的特性？</h2><p><strong>回答：</strong></p>
 <ul>
 <li>HashMap键值对存储数据实现快速存储，key-value允许为null,key值不可重复，若key重复则覆盖。</li>
@@ -525,7 +525,7 @@
 <li>底层是hash表 无序 不保证插入的顺序<h2 id="Q3：拉链法导致的链表过深问题为什么不用二叉查找树代替，而选择红黑树？为什么不一直使用红黑树？"><a href="#Q3：拉链法导致的链表过深问题为什么不用二叉查找树代替，而选择红黑树？为什么不一直使用红黑树？" class="headerlink" title="Q3：拉链法导致的链表过深问题为什么不用二叉查找树代替，而选择红黑树？为什么不一直使用红黑树？"></a>Q3：拉链法导致的链表过深问题为什么不用二叉查找树代替，而选择红黑树？为什么不一直使用红黑树？</h2></li>
 </ul>
 <p><strong>回答：</strong> 之所以选择红黑树是为了解决二叉查找树的缺陷，二叉查找树在特殊情况下会变成一条线性结构（这就跟原来使用链表结构一样了，造成很深的问题），遍历查找会非常慢。而红黑树在插入新数据后可能需要通过左旋，右旋、变色这些操作来保持平衡，引入红黑树就是为了查找数据快，解决链表查询深度的问题，我们知道红黑树属于平衡二叉树，但是为了保持“平衡”是需要付出代价的，但是该代价所损耗的资源要比遍历线性链表要少，所以当长度大于8的时候，会使用红黑树，如果链表长度很短的话，根本不需要引入红黑树，引入反而会慢。</p>
-<h2 id="Q4：说说你对红黑树的见解？"><a href="#Q4：说说你对红黑树的见解？" class="headerlink" title="Q4：说说你对红黑树的见解？"></a>Q4：说说你对红黑树的见解？</h2><p><img src="https://upload-images.jianshu.io/upload_images/5644137-3f5e5c7cae180380.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="Q4：说说你对红黑树的见解？"><a href="#Q4：说说你对红黑树的见解？" class="headerlink" title="Q4：说说你对红黑树的见解？"></a>Q4：说说你对红黑树的见解？</h2><p><img src="https://pic.downk.cc/item/5ea0f476c2a9a83be5780deb.png" alt="image.png"></p>
 <ul>
 <li>每个节点非红即黑</li>
 <li>根节点总是黑色的</li>
@@ -534,7 +534,7 @@
 <li>从根节点到叶节点或空子节点的每条路径，必须包含相同数目的黑色节点（即相同的黑色高度）</li>
 </ul>
 <h2 id="Q4：-解决hash-碰撞还有那些办法？"><a href="#Q4：-解决hash-碰撞还有那些办法？" class="headerlink" title="Q4： 解决hash 碰撞还有那些办法？"></a>Q4： 解决hash 碰撞还有那些办法？</h2><p>开放定址法。</p>
-<h2 id="Q3：HashMap的工作原理？"><a href="#Q3：HashMap的工作原理？" class="headerlink" title="Q3：HashMap的工作原理？"></a>Q3：HashMap的工作原理？</h2><p><strong>回答：</strong> HashMap给予Hashing原理，采用native本地方法调用C++函数写的获取Hash值。我们在通过get()和put()的时候，都要通过哈希算法计算出key的hashcode值，返回的hashcode值用于方便找到Bucket位置来储存或者获得Entry对象，JDK把Entry&lt;K,T&gt;改名为Node&lt;K,T&gt;对象，在put的时候，如果该位置已经有元素了，调用equals方法判断是否相等，相等的话进行替换，不相等的话，新增Node节点放在链表或者红黑树里面。<br>当获取对象的时候，通过键对象的equals()方法找到正确的键值对，然后返回值对象，HashMap使用链表或者红黑树来解决碰撞问题，当发生碰撞的时候，对象会存储在链表的下一个节点中。<br><img src="https://upload-images.jianshu.io/upload_images/5644137-c26264db45a1a8e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="Q3：HashMap的工作原理？"><a href="#Q3：HashMap的工作原理？" class="headerlink" title="Q3：HashMap的工作原理？"></a>Q3：HashMap的工作原理？</h2><p><strong>回答：</strong> HashMap给予Hashing原理，采用native本地方法调用C++函数写的获取Hash值。我们在通过get()和put()的时候，都要通过哈希算法计算出key的hashcode值，返回的hashcode值用于方便找到Bucket位置来储存或者获得Entry对象，JDK把Entry&lt;K,T&gt;改名为Node&lt;K,T&gt;对象，在put的时候，如果该位置已经有元素了，调用equals方法判断是否相等，相等的话进行替换，不相等的话，新增Node节点放在链表或者红黑树里面。<br>当获取对象的时候，通过键对象的equals()方法找到正确的键值对，然后返回值对象，HashMap使用链表或者红黑树来解决碰撞问题，当发生碰撞的时候，对象会存储在链表的下一个节点中。<br><img src="https://pic.downk.cc/item/5ea0f496c2a9a83be57824f7.png" alt="image.png"></p>
 <h2 id="Q4：如果HashMap的大小超过了负载因子-load-factor-定义的容量，怎么办？"><a href="#Q4：如果HashMap的大小超过了负载因子-load-factor-定义的容量，怎么办？" class="headerlink" title="Q4：如果HashMap的大小超过了负载因子(load factor)定义的容量，怎么办？"></a>Q4：如果HashMap的大小超过了负载因子(load factor)定义的容量，怎么办？</h2><p><strong>回答：</strong> 默认的负载因子大小为0.75，也就是说，当一个map填满了75%的bucket时候，和其它集合类(如ArrayList等)一样，将会创建原来HashMap大小的两倍的bucket数组，来重新调整map的大小，并将原来的对象放入新的bucket数组中。这个过程叫作rehashing，因为它调用hash方法找到新的bucket位置。这个值只可能在两个地方，一个是原下标的位置，另一种是在下标为&lt;原下标+原容量&gt;的位置。在1.7版本，多线程下容易发生线程不安全，在重Hash迁移数组的时候，容易出现链表死循环。</p>
 <h2 id="Q5：如何使HashMap变成线程安全的呢"><a href="#Q5：如何使HashMap变成线程安全的呢" class="headerlink" title="Q5：如何使HashMap变成线程安全的呢?"></a>Q5：如何使HashMap变成线程安全的呢?</h2><p><strong>回答：</strong>调用工具类<strong>Collections.synchronizedMap(map)</strong>; 或者使用<strong>ConcurrentHashMap</strong>集合类。</p>
 <blockquote>
